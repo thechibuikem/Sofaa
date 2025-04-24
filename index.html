@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sofaa</title>
+    <link rel="stylesheet" href="./css/styleoutput.css">
+  </head>
+  <body class="w-screen overflow-x-hidden">
+    <!-- the top section -->
+    <header>
+      <aside class="dark:bg-white bg-black dark:text-black text-white flex flex-col items-center">
+        <h6 >Sign up and get 20% off to your first order.</h6>
+        <h5  class="underline">sign up now</h5>
+      </aside>
+      <!-- the nava bar -->
+      <nav class="flex justify-between items-center px-[1rem] h-[3.5rem] ">
+        <div id="grp-1" class="flex items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="3em"
+            height="3em"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill="none"
+              stroke="#020202"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1"
+              d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
+            />
+          </svg>
+          <h3 class="text-3xl">SOFA</h3>
+          <ul class="hidden">
+            <li class="flex">
+              <a href="">shop</a>
+              <!-- down arrow besides shop -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  d="m4 8l8 8l8-8"
+                />
+              </svg>
+            </li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+          </ul>
+        </div>
+        <!-- the search group thats like an icon combined with an input field -->
+        <div id="grp-2" class="hidden">
+          <span class="flex">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#000"
+                d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0s.41-1.08 0-1.49zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"
+              />
+            </svg>
+            <input type="text" placeholder="Search for products" />
+          </span>
+        </div>
+        <!-- the group 3 starts here well on mobile it's hypothetically group 2 because one of the groups are disabled -->
+        <div id="grp-3" class="flex">
+          <!-- search icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="#000"
+              d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0s.41-1.08 0-1.49zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"
+            />
+          </svg>
+          <!-- the cart icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill="#000"
+              d="M2.5 2a.5.5 0 0 0 0 1h.246a.5.5 0 0 1 .48.363l1.586 5.55A1.5 1.5 0 0 0 6.254 10h4.569a1.5 1.5 0 0 0 1.393-.943l1.474-3.686A1 1 0 0 0 12.762 4H4.448l-.261-.912A1.5 1.5 0 0 0 2.746 2zm3.274 6.637L4.734 5h8.028l-1.475 3.686a.5.5 0 0 1-.464.314H6.254a.5.5 0 0 1-.48-.363M6.5 14a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m0-1a.5.5 0 1 1 0-1a.5.5 0 0 1 0 1m4 1a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m0-1a.5.5 0 1 1 0-1a.5.5 0 0 1 0 1"
+            />
+          </svg>
+          <!-- profile icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+          >
+            <g fill="#000" fill-rule="evenodd" clip-rule="evenodd">
+              <path
+                d="M16 9a4 4 0 1 1-8 0a4 4 0 0 1 8 0m-2 0a2 2 0 1 1-4 0a2 2 0 0 1 4 0"
+              />
+              <path
+                d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1M3 12c0 2.09.713 4.014 1.908 5.542A8.99 8.99 0 0 1 12.065 14a8.98 8.98 0 0 1 7.092 3.458A9 9 0 1 0 3 12m9 9a8.96 8.96 0 0 1-5.672-2.012A6.99 6.99 0 0 1 12.065 16a6.99 6.99 0 0 1 5.689 2.92A8.96 8.96 0 0 1 12 21"
+              />
+            </g>
+          </svg>
+        </div>
+      </nav>
+      <section id="hero" class="pt-[2rem] dark:bg-black bg-neutral-50">
+        <div id="hero-grp-1">
+          <h1 class="text-4xl font-[800] w-[90%] uppercase ml-[1rem] mb-[1rem]">find clothes that matches your style</h1>
+          <h4 class="w-[90%] opacity-50 ml-[1rem] leading-6 mb-[1rem]">
+            Browse through our diverse range of meticulously crafted garments,
+            designed to bring out your individuality and cater to your sense of
+            style.
+          </h4>
+          <button class="text-md dark:text-black text-white capitalize w-[90%] dark:bg-white bg-black rounded-full py-[1rem] block mx-auto mt-[1rem]">shop now</button>
+        </div>
+        <!-- the section containing the 3 blocks -->
+        <div class="mt-[2rem] grid grid-cols-2 md:grid-cols-3 place-items-center  gap-y-[1rem]">
+        <div >
+          <span><h2 class="font-bold">200+</h2></span>
+        <h4>international Brands</h4></div>
+                <!-- 2 -->
+        <div >
+          <span><h2 class="font-bold">200+</h2></span>
+        <h4>international Brands</h4></div>
+                <!-- 3 -->
+<div  class="col-span-2 justify-self-center md:col-start-2">
+          <span><h2 class="font-bold">200+</h2></span>
+        <h4>international Brands</h4></div>
+        </div>
+        </div>
+        </div>
+
+
+
+
+        <div id="hero-grp-2" class="">
+          <img src="./images/homepage/hero.png" alt="">
+        </div>
+      </section>
+    </header>
+    <section id="trusted-by">
+      <div></div>
+    </section>
+  </body>
+</html>
