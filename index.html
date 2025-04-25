@@ -13,7 +13,7 @@
         <h6 >Sign up and get 20% off to your first order.</h6>
         <h5  class="underline">sign up now</h5>
       </aside>
-      <!-- the nava bar -->
+      <!-- the nav bar -->
       <nav class="flex justify-between items-center px-[1rem] h-[3.5rem] ">
         <div id="grp-1" class="flex items-center">
           <svg
@@ -118,34 +118,33 @@
           </svg>
         </div>
       </nav>
-      <section id="hero" class="pt-[2rem] dark:bg-black bg-neutral-50">
+
+
+      <!-- main hero starts -->
+      <section id="hero" class="pt-[2rem] dark:bg-black bg-neutral-50  dark:text-white">
+
+
+        <!-- hero grp1 starts here -->
         <div id="hero-grp-1">
+          <!-- the opening texts -->
           <h1 class="text-4xl font-[800] w-[90%] uppercase ml-[1rem] mb-[1rem]">find clothes that matches your style</h1>
           <h4 class="w-[90%] opacity-50 ml-[1rem] leading-6 mb-[1rem]">
             Browse through our diverse range of meticulously crafted garments,
             designed to bring out your individuality and cater to your sense of
             style.
           </h4>
+          <!-- shop now button -->
           <button class="text-md dark:text-black text-white capitalize w-[90%] dark:bg-white bg-black rounded-full py-[1rem] block mx-auto mt-[1rem]">shop now</button>
-        </div>
-        <!-- the section containing the 3 blocks -->
-        <div class="mt-[2rem] grid grid-cols-2 md:grid-cols-3 place-items-center  gap-y-[1rem]">
-        <div >
-          <span><h2 class="font-bold">200+</h2></span>
-        <h4>international Brands</h4></div>
-                <!-- 2 -->
-        <div >
-          <span><h2 class="font-bold">200+</h2></span>
-        <h4>international Brands</h4></div>
-                <!-- 3 -->
-<div  class="col-span-2 justify-self-center md:col-start-2">
-          <span><h2 class="font-bold">200+</h2></span>
-        <h4>international Brands</h4></div>
-        </div>
-        </div>
-        </div>
 
 
+<!-- section holding 3 cards -->
+<!-- section holding 3 cards -->
+               <div class="mt-[2rem] grid grid-cols-2 md:grid-cols-3 place-items-center  gap-y-[1rem]" id="customers-wrapper">
+    <!-- where the customer cards would be -->
+        </div>
+
+      
+        </div>
 
 
         <div id="hero-grp-2" class="">
@@ -153,8 +152,20 @@
         </div>
       </section>
     </header>
-    <section id="trusted-by">
-      <div></div>
+    <section id="trusted-by" class="overflow-hidden whitespace-nowrap bg-black">
+      <div class="animate-marquee py-[1rem]">
+        <!-- a node to be cloned -->
+        <div id="grp-1" class="flex gap-1">
+      <img src="images/homepage/logosOnMarquee/calvinKlein.png" alt="calvinKlein" class="">
+      <img src="images/homepage/logosOnMarquee/gucci.png" alt="">
+      <img src="images/homepage/logosOnMarquee/prada.png" alt="">
+      <img src="images/homepage/logosOnMarquee/versace.png" alt="">
+      <img src="images/homepage/logosOnMarquee/zara.png" alt="">
+      </div>
+      <!-- node to be cloned -->
+      </div>
     </section>
+
+  <script src="scripts/hero.js"></script>
   </body>
 </html>
