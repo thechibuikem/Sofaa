@@ -22,7 +22,7 @@ let createCustomerCard = ({ id, number, value }) => {
   let customer = document.createElement("div");
   customer.innerHTML = `<!-- ${id}-->
         <div id="customer-${id}">
-          <span><h2 class="font-bold">${number}</h2></span>
+          <span><h2 class="font-bold sm:text-4xl">${number}</h2></span>
         <h4>${value}</h4></div>
 `;
   customerWrap.appendChild(customer);
@@ -36,7 +36,6 @@ customerWrapArray.forEach(createCustomerCard);
     "col-span-2",
     "justify-self-center",
     "md:col-start-2",
-    "bg-red-400"
   );
 
 
@@ -57,4 +56,33 @@ customerWrapArray.forEach(createCustomerCard);
 //         <h4>international Brands</h4></div>
         
 
-// so here we'll dynamically add the images for the marque
+// so here we'll dynamically add the images for the marquee
+let marqueeWrap = document.querySelector("#trusted-by-grp-1")//there's like a div housing the images
+let marqueeWrapWrapper = document.querySelector(".animate-marquee")//there's like a div housing the div that houses the images 
+
+
+const marqueeFiller = [
+ "../images/homepage/logosOnMarquee/calvinKlein.png",
+  "../images/homepage/logosOnMarquee/gucci.png",
+  "../images/homepage/logosOnMarquee/prada.png",
+  "../images/homepage/logosOnMarquee/versace.png",
+  "../images/homepage/logosOnMarquee/zara.png",
+]//array that would create our logos
+
+let createMarqueeElement = (item) => {
+  let marqueeElement = document.createElement("img");
+  marqueeElement.src = [item];
+  marqueeElement.classList.add("mr-[3rem]", )
+marqueeWrap.appendChild(marqueeElement);
+}
+// the creation of the marquee cards
+marqueeFiller.forEach(createMarqueeElement);
+
+// // now let's duplicate the marquee to make it longer
+// for(i=0;i<1;i++)
+// {
+// let marqueeWrap2 = marqueeWrap.cloneNode(true)
+// marqueeWrapWrapper.appendChild(marqueeWrap2)//the duplication itself 
+// }
+
+marqueeWrapWrapper.classList.add("flex","w-max","opacity-50")
