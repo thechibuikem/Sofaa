@@ -20,6 +20,8 @@ let customerWrapArray = [
 // customer to create like each customer review count block
 let createCustomerCard = ({ id, number, value }) => {
   let customer = document.createElement("div");
+customer.classList.add("mb-[4rem]")
+
   customer.innerHTML = `<!-- ${id}-->
         <div id="customer-${id}">
           <span><h2 class="font-bold sm:text-4xl">${number}</h2></span>

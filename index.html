@@ -8,6 +8,7 @@
     <title>sofaa</title>
     <link rel="stylesheet" href="./css/styleoutput.css" />
 
+    <!-- custom css -->
     <style>
       /* the animation for our marquee */
       @keyframes marquee {
@@ -151,7 +152,7 @@
       <!-- main hero starts -->
       <section
         id="hero"
-        class="flex flex-col sm:flex-row pt-[2rem] sm:pt-[3rem] md:pt-[4rem] sm:mx-[2rem] md:mx-[4rem] w-full bg-neutral-50 dark:bg-black dark:text-white"
+        class="flex flex-col sm:flex-row pt-[2rem] sm:pt-[3rem] md:pt-[4rem] sm:ml-[2rem] md:ml-[2rem] md:pl-[4rem] w-full bg-neutral-50 dark:bg-black dark:text-white"
       >
         <!-- hero grp1 starts here -->
         <div
@@ -209,7 +210,7 @@
     <!-- new arrivals section -->
     <section
       id="newArrivals"
-      class="flex flex-col items-center mx-[1rem] sm:mx-[2rem] md:mx-[4rem] sm:pt-[3rem] pt-[4rem] md:pt-[4rem] dark:bg-black dark:text-white overflow-x-scroll border-b-1 border-b-[#00000030] mb-8"
+      class="flex flex-col items-center mx-[1rem] sm:mx-[2rem] md:mx-[4rem] sm:pt-[3rem] pt-[6rem] md:pt-[6rem] dark:bg-black dark:text-white overflow-x-scroll border-b-1 border-b-[#00000030] mb-8"
     >
       <h3
         id="new-arrivals-section-title"
@@ -250,19 +251,20 @@
       </div>
       <button
         id="top-selling-button-to-see-more"
-        class="border-1 border-[#00000030] text-md dark:text-white capitalize w-[90%] sm:w-[15rem] dark:bg-[#000000ec] rounded-full py-[1rem] block mx-auto sm:mx-[1rem] mt-[1rem] mb-[2rem]"
+        class="border-1 border-[#00000030] text-md dark:text-white capitalize w-[90%] sm:w-[15rem] dark:bg-[#000000ec] rounded-full py-[1rem] block mx-auto sm:mx-[1rem] my-[4rem]"
       >
         view all
       </button>
     </section>
+
     <!-- the browse by dress style section-->
     <section
       id="browse-by-dress-section"
-      class="flex flex-col items-center bg-neutral-100 w-[90%] h-auto mx-[1rem] md:mx-[4rem] mt-[4rem] rounded-2xl"
+      class="flex flex-col items-center bg-neutral-100 w-[90%] h-auto mx-[1rem] md:mx-[4rem] mt-[6rem] rounded-3xl"
     >
       <h3
         id="new-arrivals-section-title"
-        class="self-center text-3xl md:text-4xl font-bold uppercase text-center w-[80%] py-[2rem]  md:py-[3rem] md-[2rem]"
+        class="self-center text-3xl md:text-4xl font-bold uppercase text-center w-[80%] py-[2rem] md:py-[3rem] md-[2rem]"
       >
         Browse by dress style
       </h3>
@@ -271,34 +273,39 @@
         id="browse-by-dress-section-sub-section"
         class="grid grid-rows-4 md:grid-rows-2 md:grid-cols-3 gap-4 md:gap-6 w-[90%]"
       >
-      <!-- figure 1 -->
+        <!-- figure 1 -->
         <figure
-          class="flex justify-start bg-[url('/images/homepage/browseByCategory/casual.png')] h-[15rem] md:h-[20rem] w-full bg-no-repeat bg-right-bottom bg-white bg-cover rounded-xl text-2xl md:text-4xl font-medium" 
+          class="flex justify-start bg-[url('./images/homepage/browseByCategory/casual.png')] h-[15rem] md:h-[20rem] w-full bg-no-repeat bg-right-bottom bg-white bg-cover rounded-xl p-4 text-2xl md:text-4xl font-medium"
         >
           casual
         </figure>
         <!-- figure 2 -->
         <figure
-          class="flex justify-start bg-[url('/images/homepage/browseByCategory/formal.png')] h-[15rem] md:h-[20rem] w-full md:col-span-2 bg-no-repeat bg-white bg-cover rounded-xl text-2xl md:text-4xl font-medium" 
+          class="flex justify-start bg-[url('/images/homepage/browseByCategory/formal.png')] h-[15rem] md:h-[20rem] w-full md:col-span-2 bg-no-repeat bg-white bg-cover rounded-xl p-4 text-2xl md:text-4xl font-medium"
         >
           formal
         </figure>
         <!-- figure 3 -->
         <figure
-          class="flex justify-start bg-[url('/images/homepage/browseByCategory/party.png')] h-[15rem] md:h-[20rem] w-full md:col-span-2 bg-no-repeat bg-left-bottom bg-white bg-cover rounded-xl text-2xl md:text-4xl font-medium" 
+          class="flex justify-start bg-[url('/images/homepage/browseByCategory/party.png')] h-[15rem] md:h-[20rem] w-full md:col-span-2 bg-no-repeat bg-left-bottom bg-white bg-cover rounded-xl p-4 text-2xl md:text-4xl font-medium"
         >
           party
         </figure>
         <!-- figure4 -->
         <figure
-          class="flex justify-start bg-[url('/images/homepage/browseByCategory/gym.png')] h-[15rem] md:h-[20rem] w-full bg-no-repeat bg-right-bottom bg-white bg-cover rounded-xl text-2xl md:text-4xl font-medium" 
+          class="flex justify-start bg-[url('/images/homepage/browseByCategory/gym.png')] h-[15rem] md:h-[20rem] w-full bg-no-repeat bg-right-bottom bg-white bg-cover rounded-xl p-4 text-2xl md:text-4xl font-medium"
         >
           gym
         </figure>
       </section>
     </section>
+    <!-- hero script -->
     <script src="scripts/hero.js"></script>
+    <!-- new arrival script -->
     <script type="module" src="scripts/populateNewArrival.js"></script>
+    <!-- top selling script -->
     <script type="module" src="scripts/populateTopSelling.js"></script>
+    <!-- browse by design script -->
+    <!-- <script src="scripts/populateBrowseByDesignSection.js"></script> -->
   </body>
 </html>
