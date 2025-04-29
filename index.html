@@ -1,7 +1,4 @@
-<!--  -->
-
-
-
+<!--tablet in-between sec  -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,24 +8,26 @@
     <title>sofaa</title>
     <link rel="stylesheet" href="./css/styleoutput.css" />
 
-<style>
-/* the animation for our marquee */
+    <style>
+      /* the animation for our marquee */
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
 
-@keyframes marquee {
- 0%{
-transform: translateX(100%);
- }
-  100%{
-transform: translateX(0%);
-  }}
+      .animate-marquee {
+        animation: marquee 10s linear infinite;
+      }
+      /* css to hide scrollbars */
 
-.animate-marquee{
-animation: marquee 10s linear infinite;
-}
-
-</style>
-
-
+      *::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
   </head>
 
   <!-- body starts here -->
@@ -42,7 +41,9 @@ animation: marquee 10s linear infinite;
         <h5 class="underline">sign up now</h5>
       </aside>
       <!-- the nav bar -->
-      <nav class="flex justify-between items-center px-[1rem] sm:px-[2rem] md:px-[4rem] h-[3.5rem]">
+      <nav
+        class="flex justify-between items-center px-[1rem] sm:px-[2rem] md:px-[4rem] h-[3.5rem]"
+      >
         <div id="grp-1" class="flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -150,13 +151,17 @@ animation: marquee 10s linear infinite;
       <!-- main hero starts -->
       <section
         id="hero"
-        class="flex flex-col sm:flex-row pt-[2rem] sm:pt-[3rem] md:pt-[4rem] sm:mx-[2rem] md:mx-[4rem] w-full bg-neutral-50  dark:bg-black dark:text-white"
+        class="flex flex-col sm:flex-row pt-[2rem] sm:pt-[3rem] md:pt-[4rem] sm:mx-[2rem] md:mx-[4rem] w-full bg-neutral-50 dark:bg-black dark:text-white"
       >
         <!-- hero grp1 starts here -->
-        <div id="hero-grp-1" class="block md:max-w-[60vw]
-        sm:flex sm:flex-col gap-y-[2rem]">
+        <div
+          id="hero-grp-1"
+          class="block md:max-w-[60vw] sm:flex sm:flex-col gap-y-[2rem]"
+        >
           <!-- the opening texts -->
-          <h1 class="text-4xl font-[800] w-[90%] uppercase ml-[1rem] mb-[1rem] sm:text-7xl">
+          <h1
+            class="text-4xl font-[800] w-[90%] uppercase ml-[1rem] mb-[1rem] sm:text-7xl"
+          >
             find clothes that matches your style
           </h1>
           <h4 class="w-[90%] opacity-50 ml-[1rem] leading-6 mb-[1rem]">
@@ -167,7 +172,7 @@ animation: marquee 10s linear infinite;
 
           <!-- shop now button -->
           <button
-            class="text-md dark:text-black text-white capitalize  w-[90%] sm:w-[15rem] dark:bg-white bg-[#000000ec] rounded-full py-[1rem] block mx-auto sm:mx-[1rem] mt-[1rem]"
+            class="text-md dark:text-black text-white capitalize w-[90%] sm:w-[15rem] dark:bg-white bg-[#000000ec] rounded-full py-[1rem] block mx-auto sm:mx-[1rem] mt-[1rem]"
           >
             shop now
           </button>
@@ -182,14 +187,16 @@ animation: marquee 10s linear infinite;
         </div>
 
         <div id="hero-grp-2" class="block sm:w-[40%]">
-          <img src="./images/homepage/hero.png" alt="" class="w-full"/>
+          <img src="./images/homepage/hero.png" alt="" class="w-full" />
         </div>
-
       </section>
     </header>
 
     <!-- trusted by section -->
-    <section id="trusted-by" class="overflow-hidden whitespace-nowrap bg-[#000000ec] dark:invert">
+    <section
+      id="trusted-by"
+      class="overflow-hidden whitespace-nowrap bg-[#000000ec] dark:invert"
+    >
       <!-- the wrapper of wrappers -->
       <div class="animate-marquee py-[1rem]">
         <div id="trusted-by-grp-1" class="flex">
@@ -200,19 +207,98 @@ animation: marquee 10s linear infinite;
     </section>
 
     <!-- new arrivals section -->
-    <section id="newarrivals" class="flex flex-col mx-[1rem] sm:mx-[2rem] md:mx-[4rem] sm:pt-[3rem] pt-[2rem] md:pt-[4rem] dark:bg-black dark:text-white overflow-x-scroll">
-      <h3 id="new-arrivals-section-title" class="self-center text-3xl font-bold uppercase">new arrivals
-
+    <section
+      id="newArrivals"
+      class="flex flex-col items-center mx-[1rem] sm:mx-[2rem] md:mx-[4rem] sm:pt-[3rem] pt-[4rem] md:pt-[4rem] dark:bg-black dark:text-white overflow-x-scroll border-b-1 border-b-[#00000030] mb-8"
+    >
+      <h3
+        id="new-arrivals-section-title"
+        class="self-center text-3xl md:text-4xl font-bold uppercase"
+      >
+        new arrivals
       </h3>
-      <div id="new-arrival-section-of-four-figures" class="flex gap-x-8 pt-8  overflow-x-scroll">
-
+      <div
+        id="new-arrival-section-of-four-figures"
+        class="flex gap-x-8 pt-8 overflow-x-scroll"
+      >
         <!-- the clothe figures themselves -->
-
       </div>
-      <button id="new-arrival-button-to-see-more"></button>
+      <button
+        id="new-arrival-button-to-see-more"
+        class="border-1 border-[#00000030] text-md dark:text-white capitalize w-[90%] sm:w-[15rem] dark:bg-[#000000ec] rounded-full py-[1rem] block mx-auto sm:mx-[1rem] mt-[1rem] mb-[2rem]"
+      >
+        view all
+      </button>
     </section>
 
+    <!--top selling section  -->
+    <section
+      id="topSelling"
+      class="flex flex-col items-center mx-[1rem] sm:mx-[2rem] md:mx-[4rem] sm:pt-[3rem] pt-[2rem] md:pt-[4rem] dark:bg-black dark:text-white overflow-x-scroll border-b-1 border-b-[#00000030] mb-8"
+    >
+      <h3
+        id="new-arrivals-section-title"
+        class="self-center text-3xl md:text-4xl font-bold uppercase"
+      >
+        Top Selling
+      </h3>
+      <div
+        id="top-selling-section-of-four-figures"
+        class="flex gap-x-8 pt-8 overflow-x-scroll"
+      >
+        <!-- the clothe figures themselves -->
+      </div>
+      <button
+        id="top-selling-button-to-see-more"
+        class="border-1 border-[#00000030] text-md dark:text-white capitalize w-[90%] sm:w-[15rem] dark:bg-[#000000ec] rounded-full py-[1rem] block mx-auto sm:mx-[1rem] mt-[1rem] mb-[2rem]"
+      >
+        view all
+      </button>
+    </section>
+    <!-- the browse by dress style section-->
+    <section
+      id="browse-by-dress-section"
+      class="flex flex-col items-center bg-neutral-100 w-[90%] h-auto mx-[1rem] md:mx-[4rem] mt-[4rem] rounded-2xl"
+    >
+      <h3
+        id="new-arrivals-section-title"
+        class="self-center text-3xl md:text-4xl font-bold uppercase text-center w-[80%] py-[2rem]  md:py-[3rem] md-[2rem]"
+      >
+        Browse by dress style
+      </h3>
+
+      <section
+        id="browse-by-dress-section-sub-section"
+        class="grid grid-rows-4 md:grid-rows-2 md:grid-cols-3 gap-4 md:gap-6 w-[90%]"
+      >
+      <!-- figure 1 -->
+        <figure
+          class="flex justify-start bg-[url('/images/homepage/browseByCategory/casual.png')] h-[15rem] md:h-[20rem] w-full bg-no-repeat bg-right-bottom bg-white bg-cover rounded-xl text-2xl md:text-4xl font-medium" 
+        >
+          casual
+        </figure>
+        <!-- figure 2 -->
+        <figure
+          class="flex justify-start bg-[url('/images/homepage/browseByCategory/formal.png')] h-[15rem] md:h-[20rem] w-full md:col-span-2 bg-no-repeat bg-white bg-cover rounded-xl text-2xl md:text-4xl font-medium" 
+        >
+          formal
+        </figure>
+        <!-- figure 3 -->
+        <figure
+          class="flex justify-start bg-[url('/images/homepage/browseByCategory/party.png')] h-[15rem] md:h-[20rem] w-full md:col-span-2 bg-no-repeat bg-left-bottom bg-white bg-cover rounded-xl text-2xl md:text-4xl font-medium" 
+        >
+          party
+        </figure>
+        <!-- figure4 -->
+        <figure
+          class="flex justify-start bg-[url('/images/homepage/browseByCategory/gym.png')] h-[15rem] md:h-[20rem] w-full bg-no-repeat bg-right-bottom bg-white bg-cover rounded-xl text-2xl md:text-4xl font-medium" 
+        >
+          gym
+        </figure>
+      </section>
+    </section>
     <script src="scripts/hero.js"></script>
-    <script src="scripts/populateNewArrival.js"></script>
+    <script type="module" src="scripts/populateNewArrival.js"></script>
+    <script type="module" src="scripts/populateTopSelling.js"></script>
   </body>
 </html>

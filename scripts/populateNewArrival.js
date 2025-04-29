@@ -1,10 +1,9 @@
-let newArrivalProductsWrapper = document.querySelector(
+const newArrivalProductsWrapper = document.querySelector(
   "#new-arrival-section-of-four-figures"
-);
+); //section wrapper
 
-
-let star = `
-    <svg
+// creating star svg
+export const starSvg = `<svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 16 16"
     fill="#FFD700"
@@ -15,51 +14,63 @@ let star = `
       d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
       clip-rule="evenodd"
     />
-  </svg>
-    `
+  </svg>`;
 
-
+export let generateStars = (rating) => {
+  let star = "";
+  for (let i = 0; i < rating; i++) {
+    star += starSvg;
+  }
+return star;
+};
 
 // the array of objects that would hold the details for creating new elements in the dom
-let newArrivalFiller = [
+const newArrivalFiller = [
   {
     id: 1,
     imageSrc: "../images/stock/black-tee.png",
     productName: "T-shirt with tape details",
-    rating: 3,
+    rating: 4,
     price: "$120",
   },
   {
     id: 2,
-    imageSrc: "../images/stock/black-tee.png",
-    productName: "T-shirt with tape details",
+    imageSrc: "../images/stock/jean-pants.png",
+    productName: "skinny jeans",
     rating: 3,
-    price: "$120",
+    price: "$240",
   },
   {
     id: 3,
-    imageSrc: "../images/stock/black-tee.png",
-    productName: "T-shirt with tape details",
-    rating: 3,
-    price: "$120",
+    imageSrc: "../images/stock/blue-white-red-checkered-shirt.png",
+    productName: "Checkered Shirt",
+    rating: 4,
+    price: "$180",
   },
   {
     id: 4,
-    imageSrc: "../images/stock/black-tee.png",
-    productName: "T-shirt with tape details",
-    rating: 3,
-    price: "$120",
+    imageSrc: "../images/stock/orange-black-stripped-tee.png",
+    productName: "sleeve striped t-shirt",
+    rating: 5,
+    price: "$30",
   },
 ];
 
-
-
 // the function that would create a product and append it to the new events wrapper
-let createProduct= ({id,imageSrc,productName,rating,price},star)=>{
+export let createProduct = (product, wrapper) => {
+  const { imageSrc, productName, rating, price } = product;
 
-let product = document.createElement("figure")
-product.classList.add("flex", "flex-col", "h-auto","new-arrival-products");
-product.innerHTML = `
+  let star = generateStars(rating);
+
+  // the productElement creation
+  let productElement = document.createElement("figure");
+  productElement.classList.add(
+    "flex",
+    "flex-col",
+    "h-auto",
+    "new-arrival-products"
+  );
+  productElement.innerHTML = `
      <div id="top" class="flex justify-center items-center rounded-xl bg-neutral-100 dark:bg-neutral-800">
         <!-- an image in new arrival -->
         <img src="${imageSrc}" alt="${productName}">
@@ -81,8 +92,18 @@ product.innerHTML = `
          <h3 class="text-2xl font-bold">${price}</h3>
       </div>
 `;
-product.classList.add("shrink-0")
-newArrivalProductsWrapper.appendChild(product);
-}
 
-newArrivalFiller.forEach(createProduct)
+  productElement.classList.add("shrink-0");
+  wrapper.appendChild(productElement);
+};
+
+if (newArrivalProductsWrapper) {
+
+newArrivalFiller.forEach((product) =>
+  createProduct(product, newArrivalProductsWrapper)
+);
+
+}
+else{
+  console.log("wrapper doesn't exist")
+}
