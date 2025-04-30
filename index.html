@@ -28,7 +28,29 @@
       *::-webkit-scrollbar {
         display: none;
       }
+
+      
+    
+.testimonialcardstyling{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 30%;
+  height: auto;
+  padding: 0 1rem;
+  padding-top:4rem ;
+  padding-bottom: 1rem;
+  border-radius: 0.25rem;
+  border:1px solid #00000050;
+}
+
+@media (max-width:450px) {
+.testimonialcardstyling{
+  width: 100%;
+}}
     </style>
+
   </head>
 
   <!-- body starts here -->
@@ -226,13 +248,13 @@
       </div>
       <button
         id="new-arrival-button-to-see-more"
-        class="border-1 border-[#00000030] text-md dark:text-white capitalize w-[90%] sm:w-[15rem] dark:bg-[#000000ec] rounded-full py-[1rem] block mx-auto sm:mx-[1rem] mt-[1rem] mb-[2rem]"
+        class="border-1 border-[#00000030] text-md dark:text-white capitalize w-[90%] sm:w-[15rem] dark:bg-[#000000ec] rounded-full py-[1rem] block mx-auto sm:mx-[1rem] my-[4rem]"
       >
         view all
       </button>
     </section>
 
-    <!--top selling section  -->
+    <!--========================  top selling section  ========================-->
     <section
       id="topSelling"
       class="flex flex-col items-center mx-[1rem] sm:mx-[2rem] md:mx-[4rem] sm:pt-[3rem] pt-[2rem] md:pt-[4rem] dark:bg-black dark:text-white overflow-x-scroll border-b-1 border-b-[#00000030] mb-8"
@@ -247,7 +269,7 @@
         id="top-selling-section-of-four-figures"
         class="flex gap-x-8 pt-8 overflow-x-scroll"
       >
-        <!-- the clothe figures themselves -->
+        <!--============================== the clothe figures themselves ============================-->
       </div>
       <button
         id="top-selling-button-to-see-more"
@@ -257,10 +279,10 @@
       </button>
     </section>
 
-    <!-- the browse by dress style section-->
+    <!--====================== the browse by dress style section ======================-->
     <section
       id="browse-by-dress-section"
-      class="flex flex-col items-center bg-neutral-100 w-[90%] h-auto mx-[1rem] md:mx-[4rem] mt-[6rem] rounded-3xl"
+      class="flex flex-col items-center bg-[#00000010] w-[90%] h-auto mx-[1rem] md:mx-[4rem] mt-[6rem] pb-[4rem] rounded-3xl"
     >
       <h3
         id="new-arrivals-section-title"
@@ -275,7 +297,7 @@
       >
         <!-- figure 1 -->
         <figure
-          class="flex justify-start bg-[url('./images/homepage/browseByCategory/casual.png')] h-[15rem] md:h-[20rem] w-full bg-no-repeat bg-right-bottom bg-white bg-cover rounded-xl p-4 text-2xl md:text-4xl font-medium"
+          class="flex justify-start bg-[url('./images/homepage/browseByCategory/casual.png')] h-[15rem] md:h-[20rem] w-full bg-no-repeat bg-white bg-cover rounded-xl p-4 text-2xl md:text-4xl font-medium"
         >
           casual
         </figure>
@@ -299,13 +321,71 @@
         </figure>
       </section>
     </section>
+    <!--=================== TESTIMONIALS ===========================-->
+    <section id="testimonial-section" class="mt-[6rem]
+    flex flex-col gap-y-12 mx-[1rem] md:mx-[4rem] overflow-hidden">
+      <div id="testimonial-heading" class="flex mx-16 justify-between">
+        <h3
+          id="testimonial-section-title"
+          class="self-center text-3xl md:text-4xl font-bold uppercase"
+        >
+          our happy customers
+        </h3>
+        <!-- the navigation bars -->
+        <div id="testimonial-navigation-bars" class="flex gap-4">
+          <!-- button - left -->
+          <button id="testimonial-left">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="#020202"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m6 8l-4 4l4 4m-4-4h20"
+              />
+            </svg>
+          </button>
+          <!-- button right -->
+          <button id="testimonial-right">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="#020202"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m18 8l4 4l-4 4M2 12h20"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="testimonial-body" class="flex shrink-0 gap-x-8">
+<!-- where the cards come into to -->
+      </div>
+    </section>
+
+    <!--=================== SCRIPT ===========================-->
+
     <!-- hero script -->
     <script src="scripts/hero.js"></script>
     <!-- new arrival script -->
     <script type="module" src="scripts/populateNewArrival.js"></script>
     <!-- top selling script -->
     <script type="module" src="scripts/populateTopSelling.js"></script>
-    <!-- browse by design script -->
-    <!-- <script src="scripts/populateBrowseByDesignSection.js"></script> -->
+    <!-- testimonial script -->
+     <script type="module" src="scripts/populateTestimonial.js"></script>
   </body>
 </html>
