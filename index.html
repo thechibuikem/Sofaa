@@ -29,28 +29,26 @@
         display: none;
       }
 
-      
-    
-.testimonialcardstyling{
-  display: flex;
-  flex-direction: column;
-  flex-grow: 0;
-  flex-shrink: 0;
-  width: 30%;
-  height: auto;
-  padding: 0 1rem;
-  padding-top:4rem ;
-  padding-bottom: 1rem;
-  border-radius: 0.25rem;
-  border:1px solid #00000050;
-}
+      .testimonialcardstyling {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 30%;
+        height: auto;
+        padding: 0 1rem;
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid #0000002c;
+      }
 
-@media (max-width:450px) {
-.testimonialcardstyling{
-  width: 100%;
-}}
+      @media (max-width: 450px) {
+        .testimonialcardstyling {
+          width: 100%;
+        }
+      }
     </style>
-
   </head>
 
   <!-- body starts here -->
@@ -322,12 +320,14 @@
       </section>
     </section>
     <!--=================== TESTIMONIALS ===========================-->
-    <section id="testimonial-section" class="mt-[6rem]
-    flex flex-col gap-y-12 mx-[1rem] md:mx-[4rem] overflow-hidden">
-      <div id="testimonial-heading" class="flex mx-16 justify-between">
+    <section
+      id="testimonial-section"
+      class="mt-[6rem] flex flex-col gap-y-12 mx-[1rem] md:mx-[4rem] overflow-hidden"
+    >
+      <div id="testimonial-heading" class="flex md:mx-16 justify-between">
         <h3
           id="testimonial-section-title"
-          class="self-center text-3xl md:text-4xl font-bold uppercase"
+          class="self-center text-2xl md:text-4xl font-bold uppercase"
         >
           our happy customers
         </h3>
@@ -373,12 +373,257 @@
       </div>
 
       <div id="testimonial-body" class="flex shrink-0 gap-x-8">
-<!-- where the cards come into to -->
+        <!-- where the cards come into to -->
+      </div>
+    </section>
+    <!--================= FOOTER ===========================-->
+    <section
+      class="flex flex-col items-center px-[1rem] sm:px-[2rem] md:px-[4rem] sm:mt-[3rem] mt-[10rem] md:mt-[10rem] bg-gray-200"
+    >
+      <!-- newsletter pull-up -->
+      <figure
+        class="flex flex-col justify-center gap-y-[2rem] md:flex-row bg-[#000002] p-6 rounded-2xl transform -translate-y-1/6"
+      >
+        <h3 class="text-3xl md:text-4xl text-[#fffff3] font-bold uppercase">
+          stay up to date about our latest offers
+        </h3>
+
+        <div class="flex flex-col gap-y-[1rem]">
+          <div class="w-auto h-auto relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="#000"
+              class="size-5 absolute left-10 top-5"
+            >
+              <path
+                d="M3 4a2 2 0 0 0-2 2v1.161l8.441 4.221a1.25 1.25 0 0 0 1.118 0L19 7.162V6a2 2 0 0 0-2-2H3Z"
+              />
+              <path
+                d="m19 8.839-7.77 3.885a2.75 2.75 0 0 1-2.46 0L1 8.839V14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.839Z"
+              />
+            </svg>
+
+            <input
+              type="text"
+              placeholder="enter your email address"
+              class="bg-[#fff] py-[1rem] rounded-full w-full pl-[4rem]"
+            />
+          </div>
+          <button class="bg-[#fff] py-[1rem] rounded-full w-full text-center">
+            subscribe to Newsletter
+          </button>
+        </div>
+      </figure>
+      <!-- newsletter stops here -->
+
+      <!-- Footer grid section -->
+      <div
+        class="grid grid-cols-2 md:grid-cols-5 gap-y-[2rem] gap-x-6 w-full pb-8 mt-[3rem]"
+      >
+        <!-- Company info -->
+        <figure class="col-span-2 md:col-span-1">
+          <h4 class="text-3xl font-bold uppercase mb-4">SOFA</h4>
+          <h6 class="text-gray-600 mb-6 max-w-xs">
+            We have clothes that suits your style and which you're proud to
+            wear. From women to men.
+          </h6>
+          <!-- / -->
+          <div class="flex gap-x-4 mb-6">
+            <!-- X logo -->
+            <a
+              href="https://x.com/dodaveha"
+              class="hover:opacity-70 transition-opacity"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="#262626"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  color="#262626"
+                >
+                  <path
+                    d="m7 17l4.194-4.193M17 7l-4.193 4.194m0 0L9.777 7H7l4.194 5.807m1.612-1.614L17 17h-2.778l-3.028-4.193"
+                  />
+                  <path
+                    d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10"
+                  />
+                </g>
+              </svg>
+            </a>
+            <!-- Facebook logo -->
+            <a href="#" class="hover:opacity-70 transition-opacity">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 32 32"
+              >
+                <g fill="#262626">
+                  <path
+                    d="M16-.034C7.159-.034-.035 7.158-.035 16S7.159 32.034 16 32.034S32.035 24.842 32.035 16S24.841-.034 16-.034m0 31C7.748 30.966 1.035 24.252 1.035 16S7.748 1.034 16 1.034S30.965 7.748 30.965 16S24.252 30.966 16 30.966"
+                  />
+                  <path
+                    d="M19.5 7h-2.668C13.434 6.966 13 9.069 13 11.345V13h-1.5a.445.445 0 0 0-.5.5v3a.445.445 0 0 0 .5.5H13v7.5a.45.45 0 0 0 .503.5h3.055c.295.034.534-.205.44-.5L17 17h2.5a.445.445 0 0 0 .5-.5v-3a.445.445 0 0 0-.5-.5h-2.503L17 11.5c.097-.639.097-.535.69-.5h1.789c.139-.031.287-.014.391-.115s.164-.239.129-.385v-3A.444.444 0 0 0 19.5 7m-.535 2.944l-1.254-.048c-1.553 0-1.683.843-1.683 1.706l-.004 1.896a.534.534 0 0 0 .534.535H19v1.932h-2.44a.535.535 0 0 0-.535.534L16.024 24H14v-7.5c0-.295-.201-.534-.497-.534H12v-1.932h1.503a.53.53 0 0 0 .378-.156c.1-.101.118-.237.118-.379v-2.155c0-2.242.453-3.31 2.832-3.31h2.133v1.91z"
+                  />
+                </g>
+              </svg>
+            </a>
+            <!-- Instagram logo -->
+            <a
+              href="https://www.instagram.com/the.chibuikem/?hl=en"
+              class="hover:opacity-70 transition-opacity"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="40"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="#262626"
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9S287.7 141 224.1 141m0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7s74.7 33.5 74.7 74.7s-33.6 74.7-74.7 74.7m146.4-194.3c0 14.9-12 26.8-26.8 26.8c-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8s26.8 12 26.8 26.8m76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9c-26.2-26.2-58-34.4-93.9-36.2c-37-2.1-147.9-2.1-184.9 0c-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9c1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0c35.9-1.7 67.7-9.9 93.9-36.2c26.2-26.2 34.4-58 36.2-93.9c2.1-37 2.1-147.8 0-184.8M398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6c-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6c-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6c29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6c11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"
+                />
+              </svg>
+            </a>
+            <!-- GitHub logo -->
+            <a
+              href="https://github.com/thechibuikem"
+              class="hover:opacity-70 transition-opacity"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="#262626"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10"
+                  />
+                  <path
+                    d="M14.333 19v-1.863c.025-.31-.018-.62-.126-.913a2.2 2.2 0 0 0-.5-.781c2.093-.227 4.293-1 4.293-4.544a3.48 3.48 0 0 0-1-2.434a3.2 3.2 0 0 0-.06-2.448s-.787-.227-2.607.961a9.15 9.15 0 0 0-4.666 0c-1.82-1.188-2.607-.96-2.607-.96A3.2 3.2 0 0 0 7 8.464a3.48 3.48 0 0 0-1 2.453c0 3.519 2.2 4.291 4.293 4.544a2.2 2.2 0 0 0-.496.773a2.1 2.1 0 0 0-.13.902V19"
+                  />
+                  <path d="M9.667 17.702c-2 .631-3.667 0-4.667-1.948" />
+                </g>
+              </svg>
+            </a>
+          </div>
+          <!--  -->
+        </figure>
+
+        <!-- COMPANY links -->
+        <ul class="space-y-3">
+          <li class="font-semibold uppercase text-sm mb-4">COMPANY</li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black text-sm">About</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black text-sm"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black text-sm">Works</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black text-sm"
+              >Career</a
+            >
+          </li>
+        </ul>
+
+        <!-- HELP links -->
+        <ul class="space-y-3">
+          <li class="font-semibold uppercase text-sm mb-4">HELP</li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black text-sm"
+              >Customer Support</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black text-sm"
+              >Delivery Details</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black text-sm"
+              >Terms & Conditions</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black text-sm"
+              >Privacy Policy</a
+            >
+          </li>
+        </ul>
+
+        <!-- FAQ links -->
+        <ul class="space-y-3">
+          <li class="font-semibold uppercase text-sm mb-4">FAQ</li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black text-sm"
+              >Account</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black text-sm"
+              >Manage Deliveries</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black text-sm"
+              >Orders</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black text-sm"
+              >Payments</a
+            >
+          </li>
+        </ul>
+
+        <!-- RESOURCES links -->
+        <ul class="space-y-3">
+          <li class="font-semibold uppercase text-sm mb-4">RESOURCES</li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black text-sm"
+              >Free eBooks</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black text-sm"
+              >Development Tutorial</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black text-sm"
+              >How to - Blog</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black text-sm"
+              >YouTube Playlist</a
+            >
+          </li>
+        </ul>
       </div>
     </section>
 
     <!--=================== SCRIPT ===========================-->
-
     <!-- hero script -->
     <script src="scripts/hero.js"></script>
     <!-- new arrival script -->
@@ -386,6 +631,6 @@
     <!-- top selling script -->
     <script type="module" src="scripts/populateTopSelling.js"></script>
     <!-- testimonial script -->
-     <script type="module" src="scripts/populateTestimonial.js"></script>
+    <script type="module" src="scripts/populateTestimonial.js"></script>
   </body>
 </html>
