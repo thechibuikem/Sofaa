@@ -10,6 +10,18 @@
 
     <!-- custom css -->
     <style>
+
+      .place-in-center{
+    column-span: 2;
+    justify-self: center }
+
+
+    @media (min-width:450) {
+      .place-in-center{
+        grid-column-start: 2;
+      }
+    }
+
       /* the animation for our marquee */
       @keyframes marquee {
         0% {
@@ -227,10 +239,10 @@
       </div>
     </section>
 
-    <!-- new arrivals section -->
+    <!--============================== new arrivals section =============================-->
     <section
       id="newArrivals"
-      class="flex flex-col items-center mx-[1rem] sm:mx-[2rem] md:mx-[4rem] sm:pt-[3rem] pt-[6rem] md:pt-[6rem] dark:bg-black dark:text-white overflow-x-scroll border-b-1 border-b-[#00000030] mb-8"
+      class="flex flex-col items-center px-[3rem] md:px-[4rem] sm:pt-[3rem] pt-[6rem] md:pt-[6rem] dark:bg-black dark:text-white overflow-x-scroll border-b-1 border-b-[#00000030] mb-8"
     >
       <h3
         id="new-arrivals-section-title"
@@ -255,7 +267,7 @@
     <!--========================  top selling section  ========================-->
     <section
       id="topSelling"
-      class="flex flex-col items-center mx-[1rem] sm:mx-[2rem] md:mx-[4rem] sm:pt-[3rem] pt-[2rem] md:pt-[4rem] dark:bg-black dark:text-white overflow-x-scroll border-b-1 border-b-[#00000030] mb-8"
+      class="flex flex-col items-center px-[2rem] md:px-[4rem] sm:pt-[3rem] pt-[2rem] md:pt-[4rem] dark:bg-black dark:text-white overflow-x-scroll border-b-1 border-b-[#00000030] mb-8"
     >
       <h3
         id="new-arrivals-section-title"
@@ -322,7 +334,7 @@
     <!--=================== TESTIMONIALS ===========================-->
     <section
       id="testimonial-section"
-      class="mt-[6rem] flex flex-col gap-y-12 mx-[1rem] md:mx-[4rem] overflow-hidden"
+      class="mt-[6rem] flex flex-col gap-y-12 mx-[1rem] md:mx-[4rem] overflow-scroll  "
     >
       <div id="testimonial-heading" class="flex md:mx-16 justify-between">
         <h3

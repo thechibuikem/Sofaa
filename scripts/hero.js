@@ -35,10 +35,9 @@ customerWrapArray.forEach(createCustomerCard);
 // centering the third customer card
   let customerCard3 = customerWrap.querySelector("#customer-3");
   customerCard3.classList.add(
-    "col-span-2",
-    "justify-self-center",
-    "md:col-start-2",
+    "place-in-center",
   );
+
 
 
 
