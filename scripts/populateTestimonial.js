@@ -112,24 +112,30 @@ testimonialFiller.forEach((testimony) =>
 //// function to control testimonial ////
 
 ////getting the width of just one testimonial card////
-let testimonialCardWidth = document
-  .querySelector("#testimonial-card1")
-  .getBoundingClientRect().width;
-
+let testimonialCardWidth = Math.ceil(
+  document.querySelector("#testimonial-card1").getBoundingClientRect().width
+);
+//////
 console.log(testimonialCardWidth);
 
 // state handling
 let currentIndex = 0;
+let movement = 0;
+
 // getting my buttons
 const leftBtn = document.querySelector("#testimonial-left");
 const rightBtn = document.querySelector("#testimonial-right");
 
 let moveright = () =>{
-  testimonialWrapper.style.transform = `translateX(${testimonialCardWidth}px)`;
+movement += testimonialCardWidth;
+
+  // testimonialWrapper.style.transform = `translateX(${movement}px)`;
+  testimonialWrapper.style.transform = translateX(100)
 }
 
 let moveleft = () => {
-  testimonialWrapper.style.transform = `translateX(-${testimonialCardWidth}px)`;
+  movement -= testimonialCardWidth
+  testimonialWrapper.style.transform = `translateX(${movement}px)`;
 };
 
 leftBtn.addEventListener("click",moveleft)
