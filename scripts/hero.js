@@ -43,7 +43,7 @@ customer.classList.add("mb-[4rem]")
 customerWrapArray.forEach(createCustomerCard);
 // centering the third customer card
   let customerCard3 = customerWrap.querySelector("#customer-3");
-  customerCard3.classList.add(
+  customerCard3.parentElement.classList.add(
     "place-in-center",
   );
 

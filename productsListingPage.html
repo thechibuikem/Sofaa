@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styleoutput.css" />
+    <title>sofaa</title>
+
+
+    <style>
+      .colorBlock{
+        width: 3rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+      }
+
+      .hide{
+        display: none;
+      }
+
+    </style>
+  </head>
+  <!--==================== BODY STARTS HERE ===================-->
+  <body class="min-w-screen overflow-x-hidden">
+    <!--======================== THE TOP SECTION ==============================-->
+    <header class="min-w-screen overflow-x-hidden">
+      <aside
+        id="aside"
+        class="dark:bg-white bg-black dark:text-black text-white flex items-center justify-center min-h-[3rem] relative"
+      >
+        <!--========================= GROUPS INSIDE ASIDE ======================-->
+        <div
+          id="grp-1"
+          class="flex flex-col lg:flex-row gap-x-[1rem] text-center"
+        >
+          <h6>Sign up and get 20% off to your first order.</h6>
+          <h5 class="underline cursor-pointer capitalize font-semibold">
+            sign up now
+          </h5>
+        </div>
+        <button
+          id="aside-Btn"
+          class="absolute right-[1rem] lg:right-[2rem] text-2xl font-semi-bold hover:text-red-500 active:text-white cursor-pointer"
+        >
+          X
+        </button>
+      </aside>
+      <!--=================================== the nav bar ====================================-->
+      <nav
+        class="flex justify-between items-center px-[1rem] sm:px-[2rem] md:px-[3rem] lg:py-[3rem] h-[3.5rem]"
+      >
+        <div id="grp-1" class="flex items-center gap-x-4">
+          <svg
+            class="lg:hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            width="3em"
+            height="3em"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill="none"
+              stroke="#020202"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1"
+              d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
+            />
+          </svg>
+          <h3 class="text-3xl font-bold">SOFA</h3>
+          <ul class="hidden lg:flex ml-[2rem] capitalize gap-x-8">
+            <li class="flex items-center">
+              <a href="">shop</a>
+              <!-- down arrow besides shop -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m4 8l8 8l8-8"
+                />
+              </svg>
+            </li>
+            <li><a href="" class="capitalize">on sale</a></li>
+            <li><a href="">new arrivals</a></li>
+            <li><a href="">brands</a></li>
+          </ul>
+        </div>
+        <!--=============== the search group thats like an icon combined with an input field ========================-->
+        <div id="grp-2" class="hidden lg:block relative">
+          <span class="flex">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="34"
+              viewBox="0 0 24 24"
+              class="absolute left-[1rem] top-1/4"
+            >
+              <path
+                fill="#00000030"
+                d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0s.41-1.08 0-1.49zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"
+              />
+            </svg>
+            <input
+              type="text"
+              placeholder="Search for products"
+              class="w-[32rem] bg-gray-200 py-[1rem] rounded-full pl-[4rem]"
+              id="products-search-bar"
+            />
+          </span>
+          <!--================== SEARCH RESULTS WRAPPER  =================================-->
+          <figure
+            id="search-result-wrapper"
+            class="hidden lg:hidden flex-col p-[2rem] bg-gray-200 absolute w-[20rem] min-h-[5rem] right-1/6 top-[4rem] h-[auto] shadow-md gap-y-[0.5rem]"
+          ></figure>
+        </div>
+        <!--===================== the group 3 starts here well on mobile it's hypothetically group 2 because one of the groups are disabled =======================-->
+        <div id="grp-3" class="flex">
+          <!--======================== search icon =========================-->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            class="lg:hidden"
+          >
+            <path
+              fill="#000"
+              d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0s.41-1.08 0-1.49zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"
+            />
+          </svg>
+          <!-- the cart icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill="#000"
+              d="M2.5 2a.5.5 0 0 0 0 1h.246a.5.5 0 0 1 .48.363l1.586 5.55A1.5 1.5 0 0 0 6.254 10h4.569a1.5 1.5 0 0 0 1.393-.943l1.474-3.686A1 1 0 0 0 12.762 4H4.448l-.261-.912A1.5 1.5 0 0 0 2.746 2zm3.274 6.637L4.734 5h8.028l-1.475 3.686a.5.5 0 0 1-.464.314H6.254a.5.5 0 0 1-.48-.363M6.5 14a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m0-1a.5.5 0 1 1 0-1a.5.5 0 0 1 0 1m4 1a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m0-1a.5.5 0 1 1 0-1a.5.5 0 0 1 0 1"
+            />
+          </svg>
+          <!-- profile icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+          >
+            <g fill="#000" fill-rule="evenodd" clip-rule="evenodd">
+              <path
+                d="M16 9a4 4 0 1 1-8 0a4 4 0 0 1 8 0m-2 0a2 2 0 1 1-4 0a2 2 0 0 1 4 0"
+              />
+              <path
+                d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1M3 12c0 2.09.713 4.014 1.908 5.542A8.99 8.99 0 0 1 12.065 14a8.98 8.98 0 0 1 7.092 3.458A9 9 0 1 0 3 12m9 9a8.96 8.96 0 0 1-5.672-2.012A6.99 6.99 0 0 1 12.065 16a6.99 6.99 0 0 1 5.689 2.92A8.96 8.96 0 0 1 12 21"
+              />
+            </g>
+          </svg>
+        </div>
+      </nav>
+    </header>
+    <!--====================  THE MAIN PART OF THE PRODUCTS SECTION ==========================-->
+    <main class="flex flex-col lg:flex-row w-screen px-[1rem] lg:px-[4rem] mt-[2rem]">
+      <!--================ THE FILTER SECTION ============================-->
+      <section id="filter-section"  class="flex flex-col items-center">
+        <!--===================== FILTER HEADING ==========================-->
+        <div id="filter-heading" class="flex justify-between w-[80%] mb-[1rem] border-b border-b-[#00000050] items-center py-[1rem]">
+          <h3 class="text-2xl capitalize ">filter</h3>
+          <!-- the icon of the filter section -->
+          <svg
+          id="filter-btn"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="size-5"
+            style="display: block !important;"
+          >
+            <path
+              d="M17 2.75a.75.75 0 0 0-1.5 0v5.5a.75.75 0 0 0 1.5 0v-5.5ZM17 15.75a.75.75 0 0 0-1.5 0v1.5a.75.75 0 0 0 1.5 0v-1.5ZM3.75 15a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75ZM4.5 2.75a.75.75 0 0 0-1.5 0v5.5a.75.75 0 0 0 1.5 0v-5.5ZM10 11a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0v-5.5A.75.75 0 0 1 10 11ZM10.75 2.75a.75.75 0 0 0-1.5 0v1.5a.75.75 0 0 0 1.5 0v-1.5ZM10 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3.75 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM16.25 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"
+            />
+          </svg>
+          
+        </div>
+        <!--======================= FILTER BODY ============================-->
+        <section id="filter-body" class="w-[80%] hide">
+<!--================ BODY SEGMENT 1   ====================-->
+<div id="product-type "class = "border-b border-b-[#00000050] pb-[1rem]">
+  <!--=========== ALL LIST OF PRODUCT TYPES ===========-->
+<ul>
+  <!--=========== PRODUCT TYPE 1 ==============-->
+  <li class="flex justify-between items-center">
+    <!--================== PRODUCT TYPE NAME =========================--> 
+    <a href="">T-shirt</a>
+    <!--==================== CHEVRON OF THE TYPE =======================-->
+    <a href="">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#00000050" class="size-4">
+  <path fill-rule="evenodd" d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+</svg>
+</a>
+  </li>
+
+   <!--=========== PRODUCT TYPE 2 ==============-->
+    <li class="flex justify-between items-center">
+    <!--================== PRODUCT TYPE NAME =========================--> 
+    <a href="">T-shirt</a>
+    <!--==================== CHEVRON OF THE TYPE =======================-->
+    <a href="">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#00000050" class="size-4">
+  <path fill-rule="evenodd" d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+</svg>
+</a>
+  </li>
+   <!--=========== PRODUCT TYPE 3 ==============-->
+  <li class="flex justify-between items-center">
+    <!--================== PRODUCT TYPE NAME =========================--> 
+    <a href="">T-shirt</a>
+    <!--==================== CHEVRON OF THE TYPE =======================-->
+    <a href="">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#00000050" class="size-4">
+  <path fill-rule="evenodd" d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+</svg>
+</a>
+  </li>
+
+   <!--=========== PRODUCT TYPE 4 ==============-->
+    <li class="flex justify-between items-center">
+    <!--================== PRODUCT TYPE NAME =========================--> 
+    <a href="">T-shirt</a>
+    <!--==================== CHEVRON OF THE TYPE =======================-->
+    <a href="">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#00000050" class="size-4">
+  <path fill-rule="evenodd" d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+</svg>
+</a>
+  </li>
+   <!--=========== PRODUCT TYPE 5 ==============-->
+   <li class="flex justify-between items-center">
+    <!--================== PRODUCT TYPE NAME =========================--> 
+    <a href="">T-shirt</a>
+    <!--==================== CHEVRON OF THE TYPE =======================-->
+    <a href="">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#00000050" class="size-4">
+  <path fill-rule="evenodd" d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+</svg>
+</a>
+  </li>
+  
+</ul>
+</div>   
+<!--================ BODY SEGMENT 2   ====================-->
+        <section id="price-segment"  class="border-b border-b-[#00000050]">
+            <div class="p-4">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-sm font-medium text-gray-900">Price</h3>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <div class="relative">
+                        <div class="h-1 bg-gray-200 rounded-full">
+                            <div class="absolute h-1 bg-black rounded-full" style="width: 40%; left: 10%"></div>
+                            <div class="absolute w-4 h-4 bg-black rounded-full -mt-1.5 -ml-2" style="left: 10%"></div>
+                            <div class="absolute w-4 h-4 bg-black rounded-full -mt-1.5 -ml-2" style="left: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-2">
+                        <span class="text-xs text-gray-500">$10</span>
+                        <span class="text-xs text-gray-500">$200</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!--================ BODY SEGMENT 3 ====================-->
+<section id="color-segment" class="border-b border-b-[#00000050] py-[1rem]">
+        <div class="flex justify-between items-center">
+          <h3 class="text-2xl mb-4 font-medium text-gray-900">
+          color
+          </h3>                    
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+            </svg>
+          </button>
+        </div>
+        <div id="hold-the-colors" class="grid grid-cols-5 
+        justify-between gap-y-[2rem]">
+          
+        </div>
+</section>
+
+     <!--================ BODY SEGMENT 4 ====================-->
+        <div class="border-b border-b-[#00000050]">
+            <div class="p-4">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-2xl font-medium text-gray-900">Size</h3>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-3 grid grid-cols-2 gap-2">
+                    <div class="text-xs text-center py-2 border border-gray-300 rounded-md cursor-pointer">All Small</div>
+                    <div class="text-xs text-center py-2 border border-gray-300 rounded-md cursor-pointer">S-Small</div>
+                    <div class="text-xs text-center py-2 border border-gray-300 rounded-md cursor-pointer bg-black text-white">M-Medium</div>
+                    <div class="text-xs text-center py-2 border border-gray-300 rounded-md cursor-pointer">L-Large</div>
+                    <div class="text-xs text-center py-2 border border-gray-300 rounded-md cursor-pointer">XL-Large</div>
+                    <div class="text-xs text-center py-2 border border-gray-300 rounded-md cursor-pointer">XXL-Large</div>
+                </div>
+            </div>
+        </div>
+<!--================ BODY SEGMENT 5 ====================-->
+        <div class="border-b border-b-[#00000050]">
+            <div class="p-4">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-2xl font-medium text-gray-900">Dress Style</h3>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-2 space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-600">Casual</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-600">Formal</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-600">Party</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!--================ BODY SEGMENT 6 ====================-->
+        <div class="p-4">
+            <button class="w-full bg-black text-white py-3 rounded-md font-medium">Apply Filter</button>
+        </div>
+
+        </section>
+
+
+
+          
+
+
+      <section
+        id="main-content-box"
+        class="grid-cols-2 w-[100%] h-[10rem] bg-red-200 hidden"
+      >
+        <div class="flex">
+          <!--================ the group 1 of the product title ================-->
+
+          <div id="grp-1"><h2>casual</h2></div>
+          <!--================ the group 2 of the product title ================-->
+          <div id="grp-2" class="flex">
+            <h5>sort by:</h5>
+            <h5>most recommended</h5>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type = "module" src="scripts/hero.js"></script>
+    <script type = "module" src="scripts/filter.js"></script>
+    <script type = "module" src="scripts/search.js"></script>
+  </body>
+</html>
+
+<!--================= HEADER IN PRODUCT DETAILS ===============-->
+

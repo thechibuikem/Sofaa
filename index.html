@@ -8,13 +8,15 @@
     <title>sofaa</title>
     <link rel="stylesheet" href="./css/styleoutput.css" />
 
-    <!-- custom css -->
+    <!--========================= CUSTOM CSS ==================-->
     <style>
-      .place-in-center {
-        column-span: 2;
+      @media (max-width:450px) {
+            .place-in-center {
+        column-span: 2 !important;
         justify-self: center;
       }
-
+      }
+  
 
       /* the animation for our marquee */
       @keyframes marquee {
@@ -57,22 +59,22 @@
     </style>
   </head>
 
-  <!-- body starts here -->
+  <!--==================== BODY STARTS HERE ===================-->
   <body class="min-w-screen overflow-x-hidden">
-    <!-- the top section -->
+    <!--======================== THE TOP SECTION ==============================-->
     <header class="min-w-screen overflow-x-hidden">
       <aside id="aside"
         class="dark:bg-white bg-black dark:text-black text-white flex items-center justify-center min-h-[3rem] relative"
       >
 
-      <!-- gropus inside aside-->
+      <!--========================= GROUPS INSIDE ASIDE ======================-->
       <div id="grp-1" class="flex flex-col lg:flex-row gap-x-[1rem] text-center">
          <h6>Sign up and get 20% off to your first order.</h6>
         <h5 class="underline cursor-pointer capitalize font-semibold">sign up now</h5>
       </div>
         <button id="aside-Btn" class="absolute right-[1rem] lg:right-[2rem] text-2xl font-semi-bold hover:text-red-500 active:text-white cursor-pointer">X</button>
       </aside>
-      <!-- the nav bar -->
+      <!--=================================== the nav bar ====================================-->
       <nav
         class="flex justify-between items-center px-[1rem] sm:px-[2rem] md:px-[3rem] lg:py-[3rem] h-[3.5rem]"
       >
@@ -119,7 +121,7 @@
             <li><a href="">brands</a></li>
           </ul>
         </div>
-        <!-- the search group thats like an icon combined with an input field -->
+        <!--=============== the search group thats like an icon combined with an input field ========================-->
         <div id="grp-2" class="hidden lg:block relative">
           <span class="flex">
             <svg
@@ -134,16 +136,20 @@
                 d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0s.41-1.08 0-1.49zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"
               />
             </svg>
-            <input
+            <inputb
               type="text"
               placeholder="Search for products"
               class="w-[32rem] bg-gray-200 py-[1rem] rounded-full pl-[4rem]"
+              id="products-search-bar"
             />
           </span>
+<!--================== SEARCH RESULTS WRAPPER  =================================-->
+          <figure id="search-result-wrapper" class="hidden lg:hidden flex-col p-[2rem] bg-gray-200 absolute  w-[20rem] min-h-[5rem] right-1/6 top-[4rem] h-[auto] shadow-md gap-y-[0.5rem]"></figure>
+
         </div>
-        <!-- the group 3 starts here well on mobile it's hypothetically group 2 because one of the groups are disabled -->
+        <!--===================== the group 3 starts here well on mobile it's hypothetically group 2 because one of the groups are disabled =======================-->
         <div id="grp-3" class="flex">
-          <!-- search icon -->
+          <!--======================== search icon =========================-->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -650,5 +656,10 @@
     <script type="module" src="scripts/populateTopSelling.js"></script>
     <!-- testimonial script -->
     <script type="module" src="scripts/populateTestimonial.js"></script>
+    <!-- script for search -->
+<script type="module" src="scripts/search.js"></script>
+<!-- script for products -->
+<script type="module" src="scripts/product.js"></script>
+<!--====================== SCRIPTS STOPS ==============================-->
   </body>
 </html>
