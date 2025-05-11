@@ -1,4 +1,4 @@
-import { productsArray } from "./product.js"; //importing the array of products from product.js
+import { productsArray } from "./productListingPage.js"; //importing the array of products from product.js
 // selecting the search input and the search result wrapper
 const searchInput = document.querySelector("#products-search-bar"); //input field for searching
 // selecting the value of the search field

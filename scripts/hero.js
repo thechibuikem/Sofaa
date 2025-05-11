@@ -1,3 +1,6 @@
+// importing the array of products
+import { productsArray} from "./productListingPage.js";
+
 ///////////////////disabling the aside when the button is clicked///////////////////
 const asideSection = document.querySelector("#aside");
 const asideBtn = document.querySelector("#aside-Btn")

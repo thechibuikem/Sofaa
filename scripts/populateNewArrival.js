@@ -1,3 +1,6 @@
+// importing the array of products
+import { productsArray } from "./productListingPage.js";
+
 const newArrivalProductsWrapper = document.querySelector(
   "#new-arrival-section-of-four-figures"
 ); //section wrapper
@@ -21,44 +24,20 @@ export let generateStars = (rating) => {
   for (let i = 0; i < rating; i++) {
     star += starSvg;
   }
-return star;
+  return star;
 };
 
 // the array of objects that would hold the details for creating new elements in the dom
 const newArrivalFiller = [
-  {
-    id: 1,
-    imageSrc: "../images/stock/black-tee.png",
-    productName: "T-shirt with tape details",
-    rating: 4,
-    price: "$120",
-  },
-  {
-    id: 2,
-    imageSrc: "../images/stock/jean-pants.png",
-    productName: "skinny jeans",
-    rating: 3,
-    price: "$240",
-  },
-  {
-    id: 3,
-    imageSrc: "../images/stock/blue-white-red-checkered-shirt.png",
-    productName: "Checkered Shirt",
-    rating: 4,
-    price: "$180",
-  },
-  {
-    id: 4,
-    imageSrc: "../images/stock/orange-black-stripped-tee.png",
-    productName: "sleeve striped t-shirt",
-    rating: 5,
-    price: "$30",
-  },
+  productsArray[0],
+  productsArray[1],
+  productsArray[2],
+  productsArray[3],
 ];
 
 // the function that would create a product and append it to the new events wrapper
 export let createProduct = (product, wrapper) => {
-  const { imageSrc, productName, rating, price } = product;
+  const { imageSrc, productName, rating, price, id } = product;
 
   let star = generateStars(rating);
 
@@ -80,14 +59,12 @@ export let createProduct = (product, wrapper) => {
         <a href="">
 
         </a>
-        <h4 id="name" class="text-xl font-semibold capitalize">
+        <a id="name" href="product.html?id=${id}" class="text-xl font-semibold capitalize cursor:pointer">
           ${productName}
-        </h4>
+        </a>
         <!-- the block of stars -->
          <div id="rating-stars" class="flex">
-
 <!-- where the stars would be -->${star}
-
          </div>
          <h3 class="text-2xl font-bold">${price}</h3>
       </div>
@@ -98,12 +75,9 @@ export let createProduct = (product, wrapper) => {
 };
 
 if (newArrivalProductsWrapper) {
-
-newArrivalFiller.forEach((product) =>
-  createProduct(product, newArrivalProductsWrapper)
-);
-
-}
-else{
-  console.log("wrapper doesn't exist")
+  newArrivalFiller.forEach((product) =>
+    createProduct(product, newArrivalProductsWrapper)
+  );
+} else {
+  console.log("wrapper doesn't exist");
 }

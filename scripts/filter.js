@@ -44,7 +44,9 @@ const colorsArray = [
   },
 ];
 
-// where the whole magic happens
+
+////////////////////////COLOR BLOCKS////////////////////////////////////////
+// where the whole magic happens for the color section
 // function to create each color block
 
 let renderItem = (wrapper, element) => {
