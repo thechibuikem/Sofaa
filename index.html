@@ -10,13 +10,12 @@
 
     <!--========================= CUSTOM CSS ==================-->
     <style>
-      @media (max-width:450px) {
-            .place-in-center {
-        column-span: 2 !important;
-        justify-self: center;
+      @media (max-width: 450px) {
+        .place-in-center {
+          column-span: 2 !important;
+          justify-self: center;
+        }
       }
-      }
-  
 
       /* the animation for our marquee */
       @keyframes marquee {
@@ -63,16 +62,26 @@
   <body class="min-w-screen overflow-x-hidden">
     <!--======================== THE TOP SECTION ==============================-->
     <header class="min-w-screen overflow-x-hidden">
-      <aside id="aside"
+      <aside
+        id="aside"
         class="dark:bg-white bg-black dark:text-black text-white flex items-center justify-center min-h-[3rem] relative"
       >
-
-      <!--========================= GROUPS INSIDE ASIDE ======================-->
-      <div id="grp-1" class="flex flex-col lg:flex-row gap-x-[1rem] text-center">
-         <h6>Sign up and get 20% off to your first order.</h6>
-        <h5 class="underline cursor-pointer capitalize font-semibold">sign up now</h5>
-      </div>
-        <button id="aside-Btn" class="absolute right-[1rem] lg:right-[2rem] text-2xl font-semi-bold hover:text-red-500 active:text-white cursor-pointer">X</button>
+        <!--========================= GROUPS INSIDE ASIDE ======================-->
+        <div
+          id="grp-1"
+          class="flex flex-col lg:flex-row gap-x-[1rem] text-center"
+        >
+          <h6>Sign up and get 20% off to your first order.</h6>
+          <h5 class="underline cursor-pointer capitalize font-semibold">
+            sign up now
+          </h5>
+        </div>
+        <button
+          id="aside-Btn"
+          class="absolute right-[1rem] lg:right-[2rem] text-2xl font-semi-bold hover:text-red-500 active:text-white cursor-pointer"
+        >
+          X
+        </button>
       </aside>
       <!--=================================== the nav bar ====================================-->
       <nav
@@ -143,9 +152,11 @@
               id="products-search-bar"
             />
           </span>
-<!--================== SEARCH RESULTS WRAPPER  =================================-->
-          <figure id="search-result-wrapper" class="hidden lg:hidden flex-col p-[2rem] bg-gray-200 absolute  w-[20rem] min-h-[5rem] right-1/6 top-[4rem] h-[auto] shadow-md gap-y-[0.5rem]"></figure>
-
+          <!--================== SEARCH RESULTS WRAPPER  =================================-->
+          <figure
+            id="search-result-wrapper"
+            class="hidden lg:hidden flex-col p-[2rem] bg-gray-200 absolute w-[20rem] min-h-[5rem] right-1/6 top-[4rem] h-[auto] shadow-md gap-y-[0.5rem]"
+          ></figure>
         </div>
         <!--===================== the group 3 starts here well on mobile it's hypothetically group 2 because one of the groups are disabled =======================-->
         <div id="grp-3" class="flex">
@@ -412,7 +423,7 @@
           stay up to date about our latest offers
         </h3>
 
-        <div class="flex flex-col gap-y-[1rem] ">
+        <div class="flex flex-col gap-y-[1rem]">
           <div class="w-auto h-auto relative">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -434,7 +445,9 @@
               class="bg-[#fff] py-[1rem] rounded-full w-full pl-[4rem] sm:pl-[1rem] sm:text-center"
             />
           </div>
-          <button class="bg-[#fff] py-[1rem] rounded-full w-full text-center capitalize">
+          <button
+            class="bg-[#fff] py-[1rem] rounded-full w-full text-center capitalize"
+          >
             subscribe to Newsletter
           </button>
         </div>
@@ -649,7 +662,9 @@
 
     <!--=================== SCRIPT ===========================-->
     <!-- hero script -->
-    <script type="mobule" src="scripts/hero.js"></script>
+    <script type="module" src="scripts/hero.js"></script>
+    <!-- controlling the aside bar -->
+    <script src="scripts/controlAside.js"></script>
     <!-- new arrival script -->
     <script type="module" src="scripts/populateNewArrival.js"></script>
     <!-- top selling script -->
@@ -657,9 +672,7 @@
     <!-- testimonial script -->
     <script type="module" src="scripts/populateTestimonial.js"></script>
     <!-- script for search -->
-<script type="module" src="scripts/search.js"></script>
-<!-- script for products -->
-<script type="module" src="scripts/product.js"></script>
-<!--====================== SCRIPTS STOPS ==============================-->
+    <script type="module" src="scripts/search.js"></script>
+    <!--====================== SCRIPTS STOPS ==============================-->
   </body>
 </html>

@@ -1,5 +1,5 @@
 ///////////////////IMPORTING DEPENDENCIES FROM POPULATE NEW ARRIVAL.JS FILE/////////////////////////////////////////////////////////
-import { generateStars, createProduct } from "./populateNewArrival.js";
+import { generateStars, createProduct } from "./createProductBlock.js";
 
 /////////THE WRAPPER THAT WOULD HOUSE THE CARDS WE ARE CREATING
 const productWrapper = document.querySelector("#main-content-box");

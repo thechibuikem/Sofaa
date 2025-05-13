@@ -1,5 +1,5 @@
 // importing dependencies for this project
-import { starSvg, generateStars } from "./populateNewArrival.js";
+import { starSvg, generateStars } from "./createProductBlock.js";
 
 // wrapper for the testimonial cards
 const testimonialWrapper = document.querySelector("#testimonial-body");

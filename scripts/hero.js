@@ -1,15 +1,3 @@
-// importing the array of products
-import { productsArray} from "./productListingPage.js";
-
-///////////////////disabling the aside when the button is clicked///////////////////
-const asideSection = document.querySelector("#aside");
-const asideBtn = document.querySelector("#aside-Btn")
-///////////stating what happens when the aside Button is clicked//////////////
-asideBtn.addEventListener("click",()=>{
-  asideSection.style.display = "none"
-})
-
-
 //getting the section containing the number of brands they've worked with
 let customerWrap = document.querySelector("#customers-wrapper");
 // the card holding information
@@ -50,11 +38,6 @@ customerWrapArray.forEach(createCustomerCard);
     "place-in-center",
   );
 
-
-
-
-
-      
 //           <!-- 1 -->
 //         <div >
 //           <span><h2 class="font-bold">200+</h2></span>
@@ -90,12 +73,5 @@ marqueeWrap.appendChild(marqueeElement);
 }
 // the creation of the marquee cards
 marqueeFiller.forEach(createMarqueeElement);
-
-// // now let's duplicate the marquee to make it longer
-// for(i=0;i<1;i++)
-// {
-// let marqueeWrap2 = marqueeWrap.cloneNode(true)
-// marqueeWrapWrapper.appendChild(marqueeWrap2)//the duplication itself 
-// }
 
 marqueeWrapWrapper.classList.add("flex","w-max","opacity-50")
