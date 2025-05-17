@@ -35,6 +35,7 @@ export let createProduct = (product, wrapper) => {
     "h-auto",
     "new-arrival-products"
   );
+  productElement.dataset.set = product.id
   productElement.innerHTML = `
      <div id="top" class="flex justify-center items-center rounded-xl bg-neutral-100 dark:bg-neutral-800">
         <!-- an image in new arrival -->
@@ -52,7 +53,7 @@ export let createProduct = (product, wrapper) => {
          <div id="rating-stars" class="flex">
 <!-- where the stars would be -->${star}
          </div>
-         <h3 class="text-2xl font-bold">${price}</h3>
+         <h3 class="text-2xl font-bold">$${price}</h3>
       </div>
 `;
 
