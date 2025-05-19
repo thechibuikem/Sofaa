@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/styleoutput.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Nova+Slim&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <style>
+      
+svg{
+  cursor: pointer;
+}
+
+.no-item-text{
+  grid-column: span 4;
+  font-size: 1.75rem;
+text-align: center;
+font-style: italic;
+font-family: "Asap";
+font-weight: 300;
+color: #00000071;
+}
+
+    </style>
   </head>
   <body class="min-w-screen overflow-x-hidden">
     <!--======================== THE TOP SECTION ==============================-->
@@ -126,6 +146,7 @@
             width="40"
             height="40"
             viewBox="0 0 16 16"
+            onclick="window.location.href='cart.html'"
           >
             <path
               fill="#000"
@@ -166,9 +187,9 @@
     </header>
 
     <!--===================== MAIN ==========================-->
-    <main class="h-auto  w-[90%] mx-auto mt-[2rem]">
-      <header class="text-3xl lg:text-4xl font-bold uppercase mb-4">your cart</header>
-<section class="h-auto grid grid-cols-1 lg:grid-cols-3 bg-gray-100 py-16 gap-y-[2rem]" id="wrapper-for-cart-figures">
+    <main class="h-auto  w-[90%] mx-auto mt-[2rem] lg:mt-[3rem]">
+      <header class="text-3xl lg:text-4xl lg:mb-12 font-bold uppercase mb-4 ">your cart</header>
+<section class="h-auto grid grid-cols-1 lg:grid-cols-4 bg-gray-100 px-4  lg:px-8 py-16 gap-y-[2rem] lg:gap-y-[4rem] lg:gap-x-[2rem] rounded-md" id="wrapper-for-cart-figures">
  
 <!-- figures -->
 </section>
