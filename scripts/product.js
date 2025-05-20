@@ -147,6 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const quantityDisplayer = document.querySelector("#quantity-displayer");
   quantityDisplayer.textContent = counter;
 
+  //4.adding event listener to update amount
   increaseBtn.addEventListener("click", () => {
     counter++;
     quantityDisplayer.textContent = counter;
