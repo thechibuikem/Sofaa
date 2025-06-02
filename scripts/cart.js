@@ -1,14 +1,31 @@
 import { cart } from "./product.js";
 import { productsArray } from "./productListingPage.js";
+// variables
+const cartObjectWrapper = document.querySelector("#wrapper-for-cart-figures");
 
+//creating a no item text to display if the cart is empty
+const noItemText = document.createElement("h1")
+noItemText.classList.add("no-item-text")
+noItemText.innerHTML = `
+Opps ... You haven't added any contents to cart yet
+`;
+
+
+// This is the wrapper that will hold all the cart items with counter updated to it
+
+//Getting my cartArray using array.map which is a mashup of my cart(cart) and productsArray
+const cartArray = cart.map((item) => {
+  const cartItem = productsArray[item.productIndex];
+ return{ ...cartItem,
+  counter:item.quantity
+ }
+})
 
 //.1 function to create cart object
-
-
 let createCartObject = (item) => {
-  //calculating the price of a cart item
+  // declaring counter
   let counter;
-
+  //function that calculates the price of a singular cart item
   let itemPrice = (item) => {
     counter = item.counter;
 
@@ -16,12 +33,19 @@ let createCartObject = (item) => {
     return productPrice;
   };
 
-  return `
-   <!-- Product Image -->
+  //function that returns the cart image
+  let cartimageCaller = (item) =>{
+    return` 
+     <!-- Product Image -->
     <img src="${
       item.imageSrc
-    }" alt="T-shirt" class="w-20 h-20 rounded-md object-cover" />
-  
+    }" alt="T-shirt" class="w-20 h-20 rounded-md object-cover"/>
+    `
+  }
+
+  //function that returns the cart details
+  let cartDetailsCaller = (item) => {
+    return`
     <!-- Product Details -->
     <div class="flex-1">
       <div class="flex gap-4 justify-between">
@@ -36,36 +60,37 @@ let createCartObject = (item) => {
       <p class="text-sm text-gray-500">Color: <span class="text-black">White</span></p>
       <div class="flex justify-between gap-x-4 items-center mt-2">
         <span class="text-xl font-semibold">$${itemPrice(item)}</span>
-        <!-- Quantity Controls -->
+    `
+  }
+
+  //function that returns the quantity details
+  let quantityDetailsCaller = (item) => {
+    return `
+       <!-- Quantity Controls -->
         <div class="flex items-center gap-x-2 border border-[#00000020] rounded-full px-3 py-1">
           <button class="text-xl cursor-pointer quantity-reduce-button" id="">−</button>
-          <span id="quantity-displayer">${counter}</span>
+          <span class="quantity-displayer">${counter}</span>
           <button class="text-xl cursor-pointer quantity-increase-button " id="">+</button>
-        </div>
+          </div>
       </div>
     </div>
+    `;
+  };
+
+
+
+  return `
+  ${cartimageCaller(item)}
+  ${cartDetailsCaller(item)}
+  ${quantityDetailsCaller(item)}     
   `;
-};
 
-// variables
-const cartObjectWrapper = document.querySelector("#wrapper-for-cart-figures");
-const cartArray = cart.map((item) => {
-  const cartItem = productsArray[item.productIndex];
- return{ ...cartItem,
-  counter:item.quantity
- }
+
 }
-);//2. Getting my cartArray using array.map which is a mashup of my cart(cart) and productsArray
-const noItemText = document.createElement("h1")
-noItemText.classList.add("no-item-text")
-
-noItemText.innerHTML = `
-Opps ... You haven't added any contents to cart yet
-`;
-
-console.log(cartArray);
 
 
+
+//creating the cart objects and appending them to the cartObjectWrapper 
 cartArray.forEach((item) => {
   const cartObject = document.createElement("figure");
   cartObject.dataset.index = cartArray.indexOf(item);
@@ -94,9 +119,10 @@ else if (document.body.contains(noItemText)){
   noItemText.remove()
 }
 
-//deleting a cart item
+  //3. Using event delegation to wait until product details are loaded
 document.addEventListener("DOMContentLoaded", () => {
-  //3.adding event listener to delete a cart item
+
+  //4.adding event listener to delete a cart item
   document.addEventListener("click", (e) => {
     const clickedBtn = e.target.closest("button.cart-delete-btn");
     const figure = e.target.closest("figure");
@@ -107,21 +133,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  //4. Using event delegation to wait until product details are loaded
-  const increaseBtn = document.querySelector(".quantity-increase-button");
-  const reduceBtn = document.querySelector(".quantity-reduce-button");
 
-  //5. adding event listener to update amount
-  increaseBtn.addEventListener("click", () => {
-
-    counter++;
-    // quantityDisplayer.textContent = counter;
-  });
-
-  reduceBtn.addEventListener("click", () => {
-    if (counter > 1) {
-      counter--;
-      // quantityDisplayer.textContent = counter;
-    }
-  });
 });
+

@@ -56,9 +56,9 @@ const quantityRenderer = () => {
   return `
     <div class="flex items-center mt-6">
       <div class="flex items-center border border-gray-300 rounded-full">
-        <button id="quantity-reduce-button" class="px-3 py-1 text-lg">−</button>
+        <button id="quantity-reduce-button" class="px-3 py-1 text-lg cursor-pointer">−</button>
         <span id="quantity-displayer" class="px-3 py-1">1</span>
-        <button id="quantity-increase-button" class="px-3 py-1 text-lg">+</button>
+        <button id="quantity-increase-button" class="px-3 py-1 text-lg cursor-pointer">+</button>
       </div>
       <button id="cart-btn" class="ml-4 px-6 py-2 bg-black text-white rounded-full flex-grow text-center cursor-pointer">
         Add to Cart

@@ -452,3 +452,24 @@ color: #00000071;
     <script type="module" src="scripts/search.js"></script>
   </body>
 </html>
+
+  document.addEventListener("DOMContentLoaded", (counter) => {
+  //5. initializing the counter
+  const increaseBtn = document.querySelector(".quantity-increase-button");
+  const reduceBtn = document.querySelector(".quantity-reduce-button");
+  const quantityDisplayer = document.querySelector("#quantity-displayer");
+
+  //5. adding event listener to update amount
+  increaseBtn.addEventListener("click", (counter) => {
+    counter++;
+  });
+
+  reduceBtn.addEventListener("click", (counter) => {
+    if (counter > 1) {
+      counter--;
+    }
+
+  quantityDisplayer.textContent = counter
+  });
+    
+});
