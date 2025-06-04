@@ -3,6 +3,9 @@ import { productsArray } from "./productListingPage.js";
 // variables
 const cartObjectWrapper = document.querySelector("#wrapper-for-cart-figures");
 
+
+console.log(cart)
+
 //creating a no item text to display if the cart is empty
 const noItemText = document.createElement("h1")
 noItemText.classList.add("no-item-text")
@@ -59,7 +62,7 @@ let createCartObject = (item) => {
       <p class="text-sm text-gray-500">Size: <span class="text-black">Large</span></p>
       <p class="text-sm text-gray-500">Color: <span class="text-black">White</span></p>
       <div class="flex justify-between gap-x-4 items-center mt-2">
-        <span class="text-xl font-semibold">$${itemPrice(item)}</span>
+        <span class="text-xl font-semibold cart-item-price">$${itemPrice(item)}</span>
     `
   }
 
@@ -133,6 +136,43 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  //5 adding event listener to update the quantity of a cart item
+cartObjectWrapper.addEventListener("click", (e) => {
+  const figure = e.target.closest("figure");
+  const increaseBtn = e.target.closest(".quantity-increase-button");
+  const reduceBtn = e.target.closest(".quantity-reduce-button");
 
-});
+  if (!figure) return;//if what I click isn't inside a figure then ignore it
+
+  //getting the cart item that was clicked from cartArray using the index stored in the figure's dataset 
+  const index = parseInt(figure.dataset.index);
+  const item = cartArray[index];
+const counter = item.counter;
+console.log(counter)
+
+  // //if the increase button is clicked
+  if (increaseBtn) {
+    item.counter++;
+    cart[index].quantity = counter + 1;
+  }
+
+  // //if the reduce button is clicked
+  if (reduceBtn && item.counter > 1) {
+      item.counter--;
+      cart[index].quantity = counter - 1;
+  }
+console.log(item)
+
+  //after updating the counter property of the item in cartArray we need to update the localStorage
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  //updating the quantity displayer in our UI
+        figure.querySelector(".quantity-displayer").textContent = item.counter;
+
+        
+        const newPrice = item.counter * item.price;
+        //updating the price in our cart object
+figure.querySelector(".cart-item-price").textContent = `$${newPrice}
+`
+});})
 

@@ -57,7 +57,7 @@ const quantityRenderer = () => {
     <div class="flex items-center mt-6">
       <div class="flex items-center border border-gray-300 rounded-full">
         <button id="quantity-reduce-button" class="px-3 py-1 text-lg cursor-pointer">−</button>
-        <span id="quantity-displayer" class="px-3 py-1">1</span>
+        <span id="quantity-displayer" class="px-3 py-1"></span>
         <button id="quantity-increase-button" class="px-3 py-1 text-lg cursor-pointer">+</button>
       </div>
       <button id="cart-btn" class="ml-4 px-6 py-2 bg-black text-white rounded-full flex-grow text-center cursor-pointer">
@@ -162,12 +162,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Cart button functionality
   const cartBtn = document.querySelector("#cart-btn");
-
+cartBtn.dataset.id = productIndex;
+//on cart button click
   cartBtn.addEventListener("click", () => {
-    cart.push({ productIndex, quantity: counter });
-    localStorage.setItem("cart", JSON.stringify(cart));
+    //first check if the product exists
+const existingProduct = cart.find(item => item.productIndex === parseInt(cartBtn.dataset.id) )
+
+if (existingProduct){
+  existingProduct.quantity += counter; 
+}
+else{
+ cart.push({ productIndex, quantity: counter });    
+}
+
+localStorage.setItem("cart", JSON.stringify(cart));
+  
     alert(`Added ${counter} item(s) of "${product.productName}" to cart`);
-  });
 });
+    
+  });
+
 
 
