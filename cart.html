@@ -197,23 +197,24 @@ color: #00000071;
 <!-- figures -->
 </section>
 <!-- checkout section -->
-<section class="lg:gap-y-[4rem] lg:gap-x-[4rem] lg:px-8 h-auto border-1 border-gray-50 px-4  py-12 gap-y-[2rem]  rounded-md mt-[2rem]">
+<section class="lg:gap-y-[4rem] lg:gap-x-[4rem] lg:px-8 h-auto border-1 border-gray-200 px-4 py-6 gap-y-[2rem]  rounded-md mt-[2rem]">
   <div class="top">
     <div class="leading-normal">
       <h5 class="text-2xl">Order Summary</h5>
-    <span>
+    <span class="flex items-center justify-between">
       <h5 class="text-xl">Subtotal</h5>
-      <h5 id="cart-subtotal"></h5>
+      <h5 class="text-3xl" id="cart-subtotal"></h5>
     </span> 
-    <span>
+    <span class="flex items-center justify-between">
       <h5 class="text-xl">Discount</h5>
       <h5 id="cart-discount"></h5>
     </span> 
-    <span>
+    <span class="flex items-center justify-between" >
       <h5 class="text-xl">Delivery Fee</h5>
-      <h5 id="cart-delivery-fee"></h5>
+      <h5 class="text-3xl"  id="cart-delivery-fee"></h5>
     </span> 
     
+
     </div>
   </div>
   <div class="bottom flex flex-col">
@@ -221,13 +222,18 @@ color: #00000071;
       <h5 class="text-xl">Total</h5>
       <h5 id="cart-total"></h5>
     </span> 
-    <span class="flex w-[90%]">
-      <div class="w-[30%]">
-        <input type="text" placeholder="Add promo code" class="sm:w-[15rem] dark:bg-white dark:text-black sm:mx-[1rem] flex justify-center items-center gap-x-4 text-md text-white capitalize w-[30%] bg-gray-50 rounded-full py-[1rem] mx-auto mt-[1rem] cursor-pointer" >
+    <span class="flex w-[100%] gap-x-6">
+      <div class="w-[40%] relative">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4 absolute top-[2.3rem] left-[0.75rem]">
+  <path fill-rule="evenodd" d="M3.75 3.5c0 .563.186 1.082.5 1.5H2a1 1 0 0 0 0 2h5.25V5h1.5v2H14a1 1 0 1 0 0-2h-2.25A2.5 2.5 0 0 0 8 1.714 2.5 2.5 0 0 0 3.75 3.5Zm3.499 0v-.038A1 1 0 1 0 6.25 4.5h1l-.001-1Zm2.5-1a1 1 0 0 0-1 .962l.001.038v1h.999a1 1 0 0 0 0-2Z" clip-rule="evenodd" />
+  <path d="M7.25 8.5H2V12a2 2 0 0 0 2 2h3.25V8.5ZM8.75 14V8.5H14V12a2 2 0 0 1-2 2H8.75Z" />
+</svg>
+
+        <input type="text" placeholder="Promo code" class="w-full sm:w-[15rem] dark:bg-white dark:text-black sm:mx-[1rem] flex justify-center items-center text-md text-gray-800 capitalize bg-gray-100 rounded-full py-[1rem] pl-[2rem] mx-auto mt-[1rem] cursor-pointer" >
       </div>
       <button class="sm:w-[15rem] dark:bg-white dark:text-black sm:mx-[1rem] flex justify-center items-center gap-x-4 text-md text-white capitalize w-[60%] bg-[#000000ec] rounded-full py-[1rem] mx-auto mt-[1rem] cursor-pointer">Apply</button>
     </span>
-    <button class="sm:w-[15rem] dark:bg-white dark:text-black sm:mx-[1rem] flex justify-center items-center gap-x-4 text-md  text-white capitalize w-[90%]  bg-[#000000ec] rounded-full py-[1rem] mx-auto mt-[1rem] cursor-pointer">
+    <button class="sm:w-[15rem] dark:bg-white dark:text-black sm:mx-[1rem] flex justify-center items-center gap-x-4 text-md  text-white capitalize w-[100%]  bg-[#000000ec] rounded-full py-[1rem] mx-auto mt-[1rem] cursor-pointer">
       Go to checkout
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
   <path fill-rule="evenodd" d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd" />

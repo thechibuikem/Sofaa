@@ -2,9 +2,11 @@ import { cart } from "./product.js";
 import { productsArray } from "./productListingPage.js";
 // variables
 const cartObjectWrapper = document.querySelector("#wrapper-for-cart-figures");
+const totalPriceDisplayer = document.querySelector("#cart-subtotal")
+const discountDisplayer = document.querySelector("#cart-discount")
+const deliveryFeeDisplayer = document.querySelector("#cart-delivery-fee")
 
 
-console.log(cart)
 
 //creating a no item text to display if the cart is empty
 const noItemText = document.createElement("h1")
@@ -176,3 +178,20 @@ figure.querySelector(".cart-item-price").textContent = `$${newPrice}
 `
 });})
 
+//cart checkout computation of prices and stuff
+const totalPrice = cartArray.reduce((sum, item)=>
+  {return sum + (item.price * item.counter)},0
+)
+totalPriceDisplayer.innerHTML = `$${totalPrice}`
+//ddelivery fee section
+const deliveryFee = Math.round(totalPrice * 0.005)
+deliveryFeeDisplayer.innerHTML = `$${deliveryFee}`
+
+
+// const discountDisplayer = document.querySelector("#cart-discount")
+
+// console.log(price)
+
+
+
+console.log(deliveryFee)
