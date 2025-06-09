@@ -2,9 +2,10 @@ import { cart } from "./product.js";
 import { productsArray } from "./productListingPage.js";
 // variables
 const cartObjectWrapper = document.querySelector("#wrapper-for-cart-figures");
-const totalPriceDisplayer = document.querySelector("#cart-subtotal")
+const subTotalPriceDisplayer = document.querySelector("#cart-subtotal")
 const discountDisplayer = document.querySelector("#cart-discount")
 const deliveryFeeDisplayer = document.querySelector("#cart-delivery-fee")
+const totalCostDisplayer = document.querySelector("#cart-total")
 
 
 
@@ -93,6 +94,34 @@ let createCartObject = (item) => {
 
 }
 
+//function for cart checkout computation of prices and stuff
+let loadCartPrices = () =>{
+
+const subTotalPrice = cartArray.reduce((sum, item)=>
+  {return sum + (item.price * item.counter)},0
+)
+//checking for discounts...
+let discountStorer = 0
+cartArray.forEach(item =>{
+  if (item.discountedPrice){
+ discountStorer += (item.discountedPrice * item.counter)
+  }
+  else{
+    return discountStorer;
+  }
+})
+
+const deliveryFee = Math.round(subTotalPrice * 0.005)
+
+const totalCost = Math.round( subTotalPrice + deliveryFee - discountStorer)
+
+//delivery fee section
+subTotalPriceDisplayer.innerHTML = `$${subTotalPrice}`
+deliveryFeeDisplayer.innerHTML = `$${deliveryFee}`
+discountDisplayer.innerHTML = `$${discountStorer}`
+totalCostDisplayer.innerHTML = `$${totalCost}`
+
+}
 
 
 //creating the cart objects and appending them to the cartObjectWrapper 
@@ -127,7 +156,7 @@ else if (document.body.contains(noItemText)){
   //3. Using event delegation to wait until product details are loaded
 document.addEventListener("DOMContentLoaded", () => {
 
-  //4.adding event listener to delete a cart item
+  //4.adding event listener to delete a cart item and also update checkout prices
   document.addEventListener("click", (e) => {
     const clickedBtn = e.target.closest("button.cart-delete-btn");
     const figure = e.target.closest("figure");
@@ -136,9 +165,13 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("cart", JSON.stringify(cart));
       figure.remove();
     }
+
+    loadCartPrices()
   });
 
-  //5 adding event listener to update the quantity of a cart item
+  
+
+  //5 adding event listener to update the quantity of a cart item and also a function to update checkout price is here too
 cartObjectWrapper.addEventListener("click", (e) => {
   const figure = e.target.closest("figure");
   const increaseBtn = e.target.closest(".quantity-increase-button");
@@ -165,6 +198,9 @@ console.log(counter)
   }
 console.log(item)
 
+//cart prices 
+loadCartPrices()
+
   //after updating the counter property of the item in cartArray we need to update the localStorage
   localStorage.setItem("cart", JSON.stringify(cart));
 
@@ -178,20 +214,7 @@ figure.querySelector(".cart-item-price").textContent = `$${newPrice}
 `
 });})
 
-//cart checkout computation of prices and stuff
-const totalPrice = cartArray.reduce((sum, item)=>
-  {return sum + (item.price * item.counter)},0
-)
-totalPriceDisplayer.innerHTML = `$${totalPrice}`
-//ddelivery fee section
-const deliveryFee = Math.round(totalPrice * 0.005)
-deliveryFeeDisplayer.innerHTML = `$${deliveryFee}`
-
-
-// const discountDisplayer = document.querySelector("#cart-discount")
-
-// console.log(price)
+loadCartPrices()
 
 
 
-console.log(deliveryFee)
