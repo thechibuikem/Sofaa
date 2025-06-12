@@ -1,39 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOfa Sign Up</title>
     <link rel="stylesheet" href="css/styleoutput.css" />
-    <title>sofaa</title>
+</head>
+<body class="bg-white min-h-screen min-w-screen overflow-x-hidden">
 
-    <style>
-      /* css to hide scrollbars */
-
-      *::-webkit-scrollbar {
-        display: none;  
-      }
-
-
-      svg{
-  cursor: pointer;
-}
-
-
-      .colorBlock {
-        width: 3rem;
-        aspect-ratio: 1/1;
-        border-radius: 50%;
-      }
-
-      .hide {
-        display: none;
-      }
-    </style>
-  </head>
-  <!--==================== BODY STARTS HERE ===================-->
-  <body class="min-w-screen overflow-x-hidden">
-    <!--======================== THE TOP SECTION ==============================-->
-    <header class="min-w-screen overflow-x-hidden">
+        <!--======================== THE TOP SECTION ==============================-->
+    <header id="header" class="min-w-screen overflow-x-hidden">
       <aside
         id="aside"
         class="dark:bg-white bg-black dark:text-black text-white flex items-center justify-center min-h-[3rem] relative"
@@ -127,7 +103,7 @@
           <!--================== SEARCH RESULTS WRAPPER  =================================-->
           <figure
             id="search-result-wrapper"
-            class="hidden lg:hidden flex-col p-[2rem] bg-gray-200 absolute w-[20rem] min-h-[5rem] right-1/6 top-[4rem] h-[auto] shadow-md gap-y-[0.5rem]"
+            class="hidden flex-col p-[2rem] bg-gray-200 absolute w-[20rem] min-h-[5rem] right-1/6 top-[4rem] h-[auto] shadow-md gap-y-[0.5rem]"
           ></figure>
         </div>
         <!--===================== the group 3 starts here well on mobile it's hypothetically group 2 because one of the groups are disabled =======================-->
@@ -177,210 +153,122 @@
         </div>
       </nav>
     </header>
-    <!--====================  THE MAIN PART OF THE PRODUCTS SECTION ==========================-->
-    <main class="flex flex-col w-screen px-[1rem] lg:px-[4rem] mt-[2rem]">
-      <!--================ THE FILTER SECTION ============================-->
-      <section id="filter-section" class="flex flex-col items-center">
-        <!--===================== FILTER HEADING ==========================-->
-        <div id="filter-heading" class="flex justify-between w-[80%] mb-[1rem] border-b border-b-[#00000050] items-center py-[1rem]">
-          <h3 class="text-2xl capitalize ">filter</h3>
-          <!-- the icon of the filter section -->
-          <svg
-            id="filter-btn"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            class="size-5 cursor-pointer"
-            style="display: block !important;"
-          >
-            <path
-              d="M17 2.75a.75.75 0 0 0-1.5 0v5.5a.75.75 0 0 0 1.5 0v-5.5ZM17 15.75a.75.75 0 0 0-1.5 0v1.5a.75.75 0 0 0 1.5 0v-1.5ZM3.75 15a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75ZM4.5 2.75a.75.75 0 0 0-1.5 0v5.5a.75.75 0 0 0 1.5 0v-5.5ZM10 11a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0v-5.5A.75.75 0 0 1 10 11ZM10.75 2.75a.75.75 0 0 0-1.5 0v1.5a.75.75 0 0 0 1.5 0v-1.5ZM10 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3.75 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM16.25 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"
-            />
-          </svg>
-        </div>
-        <!--======================= FILTER BODY ============================-->
-        <section id="filter-body" class="w-[80%] hide duration-400 ease-linear"> 
-          <!--================ BODY SEGMENT 1   ====================-->
-          <div id="product-type" class="border-b border-b-[#00000050] pb-[1rem]">
-            <!--=========== ALL LIST OF PRODUCT TYPES ===========-->
-            <ul>
-              <!--=========== PRODUCT TYPE 1 ==============-->
-              <li class="flex justify-between items-center">
-                <!--================== PRODUCT TYPE NAME =========================--> 
-                <a href="">T-shirt</a>
-                <!--==================== CHEVRON OF THE TYPE =======================-->
-                <a href="">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#00000050" class="size-4">
-                    <path fill-rule="evenodd" d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                  </svg>
-                </a>
-              </li>
-              <!--=========== PRODUCT TYPE 2 ==============-->
-              <li class="flex justify-between items-center">
-                <!--================== PRODUCT TYPE NAME =========================--> 
-                <a href="">T-shirt</a>
-                <!--==================== CHEVRON OF THE TYPE =======================-->
-                <a href="">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#00000050" class="size-4">
-                    <path fill-rule="evenodd" d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                  </svg>
-                </a>
-              </li>
-              <!--=========== PRODUCT TYPE 3 ==============-->
-              <li class="flex justify-between items-center">
-                <!--================== PRODUCT TYPE NAME =========================--> 
-                <a href="">T-shirt</a>
-                <!--==================== CHEVRON OF THE TYPE =======================-->
-                <a href="">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#00000050" class="size-4">
-                    <path fill-rule="evenodd" d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                  </svg>
-                </a>
-              </li>
-              <!--=========== PRODUCT TYPE 4 ==============-->
-              <li class="flex justify-between items-center">
-                <!--================== PRODUCT TYPE NAME =========================--> 
-                <a href="">T-shirt</a>
-                <!--==================== CHEVRON OF THE TYPE =======================-->
-                <a href="">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#00000050" class="size-4">
-                    <path fill-rule="evenodd" d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                  </svg>
-                </a>
-              </li>
-              <!--=========== PRODUCT TYPE 5 ==============-->
-              <li class="flex justify-between items-center">
-                <!--================== PRODUCT TYPE NAME =========================--> 
-                <a href="">T-shirt</a>
-                <!--==================== CHEVRON OF THE TYPE =======================-->
-                <a href="">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#00000050" class="size-4">
-                    <path fill-rule="evenodd" d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>   
-          <!--================ BODY SEGMENT 2   ====================-->
-          <section id="price-segment" class="border-b border-b-[#00000050]">
-            <div class="p-4">
-              <div class="flex justify-between items-center">
-                <h3 class="text-sm font-medium text-gray-900">Price</h3>
-                <button>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                  </svg>
+
+    <!--======================= the main section ============================-->
+    <main class=" w-screen flex justify-center my-[3rem]">
+        <!-- Sign Up Card -->
+        <figure class="sm:border-2 sm:border-[#00000050] bg-white border-none rounded-lg sm:shadow-md p-8 max-w-md">
+            <!-- Header -->
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-black mb-2">Log In</h1>
+                <p class="text-gray-600">Reconnect with us today</p>
+            </div>
+<!-- Login Form -->
+            <form class="space-y-6">
+                <!-- Email Field -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-black mb-2">
+                        Email Address
+                    </label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required
+                        class="w-full px-4 py-3 border-1 border-[#00000050]  rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200"
+                        placeholder="Enter your email"
+                    >
+                </div>
+
+                <!-- Password Field -->
+                <div>
+                    <label for="password" class="block text-sm font-medium text-black mb-2">
+                        Password
+                    </label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required
+                        class="w-full px-4 py-3 border-1 border-[#00000050] rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200"
+                        placeholder="Enter your password"
+                    >
+                </div>
+
+                <!-- Remember Me & Forgot Password -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input 
+                            type="checkbox" 
+                            id="remember" 
+                            name="remember" class="border-1 border-[#00000050] -2 border-black rounded focus:ring-black focus:ring-2"
+                        >
+                        <label for="remember" class="ml-2 text-sm text-black">
+                            Remember me
+                        </label>
+                    </div>
+                    <a href="#" class="text-sm text-black hover:underline font-medium">
+                        Forgot password?
+                    </a>
+                </div>
+
+                <!-- Login Button -->
+                <button 
+                    type="submit"
+                    class="w-full bg-black text-white py-3 px-4 rounded-lg font-medium hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all duration-200"
+                >
+                    Sign In
                 </button>
-              </div>
-              <div class="mt-4">
+            </form>
+
+            <!-- Divider -->
+            <div class="mt-8 mb-6">
                 <div class="relative">
-                  <div class="h-1 bg-gray-200 rounded-full">
-                    <div class="absolute h-1 bg-black rounded-full" style="width: 40%; left: 10%"></div>
-                    <div class="absolute w-4 h-4 bg-black rounded-full -mt-1.5 -ml-2" style="left: 10%"></div>
-                    <div class="absolute w-4 h-4 bg-black rounded-full -mt-1.5 -ml-2" style="left: 50%"></div>
-                  </div>
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-gray-300"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span class="px-2 bg-white text-gray-500">Or continue with</span>
+                    </div>
                 </div>
-                <div class="flex justify-between mt-2">
-                  <span class="text-xs text-gray-500">$10</span>
-                  <span class="text-xs text-gray-500">$200</span>
-                </div>
-              </div>
             </div>
-          </section>
-          <!--================ BODY SEGMENT 3 ====================-->
-          <section id="color-segment" class="border-b border-b-[#00000050] py-[1rem]">
-            <div class="flex justify-between items-center">
-              <h3 class="text-2xl mb-4 font-medium text-gray-900">
-                color
-              </h3>                    
-              <button>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
-                </svg>
-              </button>
-            </div>
-            <div id="hold-the-colors" class="grid grid-cols-5 justify-between gap-y-[2rem]">
-              
-            </div>
-          </section>
-          <!--================ BODY SEGMENT 4 ====================-->
-          <div class="border-b border-b-[#00000050]">
-            <div class="p-4">
-              <div class="flex justify-between items-center">
-                <h3 class="text-2xl font-medium text-gray-900">Size</h3>
-                <button>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                  </svg>
+
+            <!-- Social Login Buttons -->
+            <div class="grid grid-cols-2 gap-3">
+                <button 
+                    type="button"
+                    class="flex items-center justify-center px-4 py-3 border-1 border-[#00000050]  rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all duration-200"
+                >
+                    <svg class="w-5 h-5" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                        <path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                        <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                        <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                    </svg>
                 </button>
-              </div>
-              <div class="mt-3 grid grid-cols-2 gap-2">
-                <div class="text-xs text-center py-2 border border-gray-300 rounded-full cursor-pointer">All Small</div>
-                <div class="text-xs text-center py-2 border border-gray-300 rounded-full cursor-pointer">S-Small</div>
-                <div class="text-xs text-center py-2 border border-gray-300 rounded-full cursor-pointer bg-black text-white">M-Medium</div>
-                <div class="text-xs text-center py-2 border border-gray-300 rounded-full cursor-pointer">L-Large</div>
-                <div class="text-xs text-center py-2 border border-gray-300 rounded-full cursor-pointer">XL-Large</div>
-                <div class="text-xs text-center py-2 border border-gray-300 rounded-full cursor-pointer">XXL-Large</div>
-              </div>
-            </div>
-          </div>
-          <!--================ BODY SEGMENT 5 ====================-->
-          <div class="border-b border-b-[#00000050]">
-            <div class="p-4">
-              <div class="flex justify-between items-center">
-                <h3 class="text-2xl font-medium text-gray-900">Dress Style</h3>
-                <button>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                  </svg>
+
+                <button 
+                    type="button"
+                    class="flex items-center justify-center px-4 py-3 border-1 border-[#00000050]  rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all duration-200"
+                >
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
                 </button>
-              </div>
-              <div class="mt-2 space-y-2">
-                <div class="flex justify-between items-center">
-                  <span class="text-sm text-gray-600">Casual</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-sm text-gray-600">Formal</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-sm text-gray-600">Party</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
             </div>
-          </div>
-          <!--================ BODY SEGMENT 6 ====================-->
-          <div class="p-4">
-            <button class="w-full bg-black text-white py-3 font-medium rounded-full">Apply Filter</button>
-          </div>
-        </section>
-</section>
-        <section
-          id="main-content-box"
-          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 w-[100%] h-[auto] bg-gray-200 capitalize gap-x-8 pt-8 px-4 sm:px-8 md:px-12 lg:px-16 gap-y-8 overflow-x-scroll mt-[4rem] rounded-xl"
-        >
-          <div class="col-span-2 sm:col-span-3 md:col-span-4 flex justify-between items-center px-4 max-h-max">
-            <!--================ the group 1 of the product title ================-->
-            <h2 class="text-3xl font-bold">casual</h2>
-            <!--================ the group 2 of the product title ================-->
-            <div id="grp-2" class="flex gap-2">
-              <h5>sort by :</h5>
-              <h5>most recommended</h5>
+
+            <!-- Sign Up Link -->
+            <div class="mt-8 text-center">
+                <p class="text-black">
+                    Don't have an account? 
+                    <a href="signpUp.html" class="font-medium hover:underline">Create one here</a>
+                </p>
             </div>
-          </div>
-        </section>
-      </section>
+        </figure>
     </main>
 
-      <!--================= FOOTER ===========================-->
+
+        <!--================= FOOTER ===========================-->
     <footer
       class="flex flex-col items-center px-[1rem] sm:px-[2rem] md:px-[4rem] sm:mt-[3rem] mt-[10rem] md:mt-[10rem] bg-gray-200"
     >
@@ -392,7 +280,7 @@
           stay up to date about our latest offers
         </h3>
 
-        <div class="flex flex-col gap-y-[1rem] ">
+        <div class="flex flex-col gap-y-[1rem]">
           <div class="w-auto h-auto relative">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -414,7 +302,9 @@
               class="bg-[#fff] py-[1rem] rounded-full w-full pl-[4rem] sm:pl-[1rem] sm:text-center"
             />
           </div>
-          <button class="bg-[#fff] py-[1rem] rounded-full w-full text-center capitalize">
+          <button
+            class="bg-[#fff] py-[1rem] rounded-full w-full text-center capitalize"
+          >
             subscribe to Newsletter
           </button>
         </div>
@@ -627,10 +517,8 @@
       </div>
     </footer>
     <!-- =================================== SCRIPTS FOR THE PROJECT ========================================= -->
-      <!-- controlling the aside bar -->
-      <script src="scripts/controlAside.js"></script>
-    <script type="module" src="scripts/filter.js"></script>
+    <!-- controlling the aside bar -->
+    <script src="scripts/controlAside.js"></script>
     <script type="module" src="scripts/search.js"></script>
-    <script type="module" src="scripts/productListingPage.js"></script>
-  </body>
+</body>
 </html>

@@ -14,7 +14,7 @@ const noItemText = document.createElement("h1")
 noItemText.classList.add("no-item-text")
 noItemText.innerHTML = `
 Opps ... You haven't added any contents to cart yet
-`;
+`;  
 
 
 // This is the wrapper that will hold all the cart items with counter updated to it
