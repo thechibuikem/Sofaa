@@ -2,7 +2,7 @@
 
 //1.Getting elements for account creation
 const form = document.querySelector("#sign-up-form")
-const UserName = document.querySelector("#UserName")
+const userName = document.querySelector("#UserName")
 const firstName = form.querySelector("#firstName")
 const lastName = form.querySelector("#lastName")
 const email = form.querySelector("#email")
@@ -16,7 +16,7 @@ let userId = 0 //. initializing the first userId to zero
 let loggedOut = true;
 
 //. the array of objects that would store user details in local storage
-let usersArray = JSON.parse(localStorage.getItem("usersArrayCloudVersion"))||[]
+let usersArray = JSON.parse(localStorage.getItem("usersArrayCloudVersion")) || []
 
 //. so basically these are two contents that I would be dynamically updating depending on the state of loggedOut state manager
 let mainLoggedOut = (`
@@ -194,7 +194,7 @@ let mainLoggedOut = (`
         </figure>
     </main>
     `)
-let mainLoggedIn  = (`
+let mainLoggedIn = (`
             <div class="text-center">
                 <!-- Main message with highlighted username -->
                 <p class="text-md sm:text-base md:text-3xl text-gray-800 mb-4 sm:mb-6 leading-relaxed">
@@ -212,47 +212,53 @@ let mainLoggedIn  = (`
     `)
 
 //. the conditional rendering manipulation begins    
-if (!loggedOut)  {
-mainSection.classList = ""; //clears all classes
-mainSection.classList.add("bg-white",
-    "border-l",
-    "border-r",
-    "px-4",
-    " py-6",
-    " sm:px-6",
-    " sm:py-8",
-    " md:px-8",
-    "md:py-10",
-)
-mainSection.innerHTML = mainLoggedIn
+if (!loggedOut) {
+    mainSection.classList = ""; //clears all classes
+    mainSection.classList.add("bg-white",
+        "border-l",
+        "border-r",
+        "px-4",
+        " py-6",
+        " sm:px-6",
+        " sm:py-8",
+        " md:px-8",
+        "md:py-10",
+    )
+    mainSection.innerHTML = mainLoggedIn
 };
 
 //. here the magic of creating users begins
-createAccountBtn.addEventListener("click", ()=>{
-    //.adding new users to the usersArray
-    usersArray.forEach(element => {
-        if (userName.value === item.UserName){
-            window.alert("Could not complete because user already exists, please try logging in")
-        }
-        else{
-            userId++;
-            usersArray.push({
-                id : userId,
-                firstName : firstName.value,
-                lastName:lastName.value,
-                // fullName: `${firstName} ${lastName}`,
-                email: email.value,
-                password:password.value
-            });
-            const inputfields = form.querySelectorAll(input)
-            inputfields.forEach(element => {element.value = ""});
-            localStorage.setItem("usersArrayCloudVersion",JSON.stringify(usersArray));
-        }
-    });
-})
-    console.log(usersArray)
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+    const userAlreadyExists = usersArray.some(user => {user.userName === userName.value.trim()})
 
+    if (userAlreadyExists){
+        alert("user with userName already exists")
+        return;
+    }
 
+    else{
+        // .creating a new user
+        ++userId
+        const user = {
+            id: userId,
+            username: userName.value.trim(),
+            firstName: firstName.value.trim(),
+            lastName: lastName.value.trim(),
+            email: email.value.trim(),
+            password: password.value.trim(), // optional: hash later
+        };
+        //. adding a new user to usersArray
+        usersArray.push(user)
+        localStorage.setItem("usersArrayCloudVersion", JSON.stringify(usersArray));
+        console.log(usersArray);
 
+        //. clearing the input fields
+        const inputfields = form.querySelectorAll("input")
+        inputfields.forEach(element => {element.value = "" });
+    }
 
+}
+);
 
+        // console.log(usersArray)
