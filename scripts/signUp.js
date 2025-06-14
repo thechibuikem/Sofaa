@@ -7,7 +7,6 @@ const firstName = form.querySelector("#firstName")
 const lastName = form.querySelector("#lastName")
 const email = form.querySelector("#email")
 const password = form.querySelector("#password")
-const confirmPassword = form.querySelector("#confirmPassword")
 const createAccountBtn = form.querySelector("#createAccountBtn")
 const mainSection = document.querySelector("#sign-up-main-section")
 let userId = 0 //. initializing the first userId to zero
@@ -16,7 +15,12 @@ let userId = 0 //. initializing the first userId to zero
 let loggedOut = true;
 
 //. the array of objects that would store user details in local storage
-let usersArray = JSON.parse(localStorage.getItem("usersArrayCloudVersion")) || []
+let usersArray = JSON.parse(localStorage.getItem("usersArrayCloudVersion")) || [{id: 0,
+            userName:"",
+            firstName:"",
+            lastName: "",
+            email: "",
+            password:""}]
 
 //. so basically these are two contents that I would be dynamically updating depending on the state of loggedOut state manager
 let mainLoggedOut = (`
@@ -103,21 +107,6 @@ let mainLoggedOut = (`
                         required
                         class="w-full px-4 py-3 border-1 border-[#00000050] rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200"
                         placeholder="Create a strong password"
-                    >
-                </div>
-
-                <!-- Confirm Password Field -->
-                <div>
-                    <label for="confirmPassword" class="block text-sm font-medium text-black mb-2">
-                        Confirm Password
-                    </label>
-                    <input 
-                        type="password" 
-                        id="confirmPassword" 
-                        name="confirmPassword" 
-                        required
-                        class="w-full px-4 py-3 border-1 border-[#00000050] rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200"
-                        placeholder="Confirm your password"
                     >
                 </div>
 
@@ -230,7 +219,7 @@ if (!loggedOut) {
 //. here the magic of creating users begins
 form.addEventListener("submit", (e) => {
     e.preventDefault()
-    const userAlreadyExists = usersArray.some(user => {user.userName === userName.value.trim()})
+    const userAlreadyExists = usersArray.some(user => user.userName == userName.value.trim())
 
     if (userAlreadyExists){
         alert("user with userName already exists")
@@ -242,11 +231,11 @@ form.addEventListener("submit", (e) => {
         ++userId
         const user = {
             id: userId,
-            username: userName.value.trim(),
+            userName: userName.value.trim(),
             firstName: firstName.value.trim(),
             lastName: lastName.value.trim(),
             email: email.value.trim(),
-            password: password.value.trim(), // optional: hash later
+            password: password.value.trim(), //
         };
         //. adding a new user to usersArray
         usersArray.push(user)
@@ -261,4 +250,4 @@ form.addEventListener("submit", (e) => {
 }
 );
 
-        // console.log(usersArray)
+        console.log(usersArray)
