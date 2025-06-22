@@ -12,7 +12,7 @@ const mainSection = document.querySelector("#sign-up-main-section")
 let userId = 0 //. initializing the first userId to zero
 
 //. the state manager that determines whether a user is logged in or not
-let loggedOut = true;
+let loggedOut = JSON.parse(localStorage.getItem("loggedOutCloudVersion"))||true;
 
 //. the array of objects that would store user details in local storage
 let usersArray = JSON.parse(localStorage.getItem("usersArrayCloudVersion")) || [{id: 0,
@@ -200,21 +200,6 @@ let mainLoggedIn = (`
             </div>
     `)
 
-//. the conditional rendering manipulation begins    
-if (!loggedOut) {
-    mainSection.classList = ""; //clears all classes
-    mainSection.classList.add("bg-white",
-        "border-l",
-        "border-r",
-        "px-4",
-        " py-6",
-        " sm:px-6",
-        " sm:py-8",
-        " md:px-8",
-        "md:py-10",
-    )
-    mainSection.innerHTML = mainLoggedIn
-};
 
 //. here the magic of creating users begins
 form.addEventListener("submit", (e) => {
@@ -245,9 +230,40 @@ form.addEventListener("submit", (e) => {
         //. clearing the input fields
         const inputfields = form.querySelectorAll("input")
         inputfields.forEach(element => {element.value = "" });
-    }
 
-}
-);
+        //.logging in user
+        loggedOut = !loggedOut
+        localStorage.setItem("loggedOut",JSON.stringify(loggedOut))
 
-        console.log(usersArray)
+        console.log(loggedOut)
+   //dynamic rendering
+    mainSection.classList = ""; //clears all classes
+    mainSection.classList.add("bg-white",
+        "border-l",
+        "border-r",
+        "px-4",
+        "py-6",
+        "sm:px-6",
+        "sm:py-8",
+        "md:px-8",
+        "md:py-10",
+    )
+    mainSection.innerHTML = mainLoggedIn
+    
+}})
+
+//. the conditional rendering manipulation begins    
+if (loggedOut == false) {
+    mainSection.classList = ""; //clears all classes
+    mainSection.classList.add("bg-white",
+        "border-l",
+        "border-r",
+        "px-4",
+        "py-6",
+        "sm:px-6",
+        "sm:py-8",
+        "md:px-8",
+        "md:py-10",
+    )
+    mainSection.innerHTML = mainLoggedIn
+    };

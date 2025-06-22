@@ -100,7 +100,7 @@ ${verifiedIcon}
            ${text}
           </h6>
   `;
-  testimonialCard.classList.add("testimonialcardstyling");
+  testimonialCard.classList.add("dark:border-[#ffffff50]","dark:border-1","testimonialcardstyling",);
 
   wrapper.appendChild(testimonialCard);
 };

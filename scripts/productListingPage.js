@@ -10,7 +10,7 @@ export const productsArray = [
     id: 1,
     imageSrc: "../images/stock/black-tee.png",
     productName: "T-shirt with tape details",
-    rating: 4,
+    rating: 5,
     price: 120,
     discountedPrice: 60,
     type: "",

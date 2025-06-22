@@ -49,7 +49,8 @@ let createDesign = (wrapper, design) => {
     "text-2xl",
     "md:text-4xl",
     "font-medium",
-    "p-4"
+    "p-4",
+    " ",
   );
   designELement.innerHTML = `
         <!-- figure ${id} -->

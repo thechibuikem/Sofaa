@@ -63,12 +63,12 @@ svg{
   </head>
 
   <!--==================== BODY STARTS HERE ===================-->
-  <body class="min-w-screen overflow-x-hidden">
+  <body class="min-w-screen overflow-x-hidden  dark:bg-black dark:text-white">
     <!--======================== THE TOP SECTION ==============================-->
     <header class="min-w-screen overflow-x-hidden">
       <aside
         id="aside"
-        class="dark:bg-white bg-black dark:text-black text-white flex items-center justify-center min-h-[3rem] relative"
+        class="dark:bg-white bg-black dark:text-black dark:border-b dark:border-[#00000030] text-white flex items-center justify-center min-h-[3rem] relative"
       >
         <!--========================= GROUPS INSIDE ASIDE ======================-->
         <div
@@ -152,7 +152,7 @@ svg{
             <input
               type="text"
               placeholder="Search for products"
-              class="w-[32rem] bg-gray-200 py-[1rem] rounded-full pl-[4rem]"
+              class="w-[32rem] bg-gray-200 py-[1rem] rounded-full pl-[4rem] dark:bg-neutral-800"
               id="products-search-bar"
             />
           </span>
@@ -163,7 +163,7 @@ svg{
           ></figure>
         </div>
         <!--===================== the group 3 starts here well on mobile it's hypothetically group 2 because one of the groups are disabled =======================-->
-        <div id="grp-3" class="flex">
+        <div id="grp-3" class="flex dark:invert">
           <!--======================== search icon =========================-->
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +212,7 @@ svg{
       <!-- main hero starts -->
       <section
         id="hero"
-        class="flex flex-col sm:flex-row pt-[2rem] sm:pt-[3rem] md:pt-[4rem] md:ml-[1rem] lg:pl-[4rem] w-full bg-gray-200 dark:bg-black dark:text-white rounded-tl-xl"
+        class="flex flex-col sm:flex-row pt-[2rem] sm:pt-[3rem] md:pt-[4rem] md:ml-[1rem] lg:pl-[4rem] w-full bg-gray-200 dark:border-[#ffffff50] md:dark:border-1 dark:bg-black rounded-tl-xl"
       >
         <!-- hero grp1 starts here -->
         <div
@@ -257,7 +257,7 @@ svg{
     <!-- trusted by section -->
     <section
       id="trusted-by"
-      class="overflow-hidden whitespace-nowrap bg-[#000000ec] dark:invert"
+      class="overflow-hidden whitespace-nowrap bg-[#000000ec]  dark:bg-[#000000ec]"
     >
       <!-- the wrapper of wrappers -->
       <div class="animate-marquee py-[1rem]">
@@ -323,7 +323,7 @@ svg{
     <!--====================== the browse by dress style section ======================-->
     <section
       id="browse-by-dress-section"
-      class="flex flex-col items-center bg-gray-200 w-[90%] h-auto mx-[1rem] md:mx-[4rem] mt-[6rem] pb-[4rem] rounded-3xl"
+      class="flex flex-col items-center bg-gray-200 w-[90%] h-auto mx-[1rem] md:mx-[4rem] mt-[6rem] pb-[4rem] rounded-3xl dark:bg-black dark:border-[#ffffff50] dark:border-1"
     >
       <h3
         id="new-arrivals-section-title"
@@ -421,11 +421,11 @@ svg{
     </section>
     <!--================= FOOTER ===========================-->
     <footer
-      class="flex flex-col items-center px-[1rem] sm:px-[2rem] md:px-[4rem] sm:mt-[3rem] mt-[10rem] md:mt-[10rem] bg-gray-200"
+      class="flex flex-col items-center px-[1rem] sm:px-[2rem] md:px-[4rem] sm:mt-[3rem] mt-[10rem] md:mt-[10rem] bg-gray-200 dark:bg-[#000002] dark:border-[#ffffff50] dark:border-t-1"
     >
       <!--===================== newsletter pull-up ==================-->
       <figure
-        class="flex flex-col justify-center gap-y-[2rem] md:flex-col bg-[#000002] p-6 rounded-2xl transform -translate-y-1/4"
+        class="flex flex-col justify-center gap-y-[2rem] md:flex-col bg-[#000002] p-6 rounded-2xl transform -translate-y-1/4 dark:border-[#ffffff50] dark:border-1"
       >
         <h3 class="text-3xl md:text-4xl text-[#fffff3] font-bold uppercase">
           stay up to date about our latest offers
