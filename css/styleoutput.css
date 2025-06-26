@@ -851,11 +851,11 @@
   .pb-\[4rem\] {
     padding-bottom: 4rem;
   }
-  .pl-\[2rem\] {
-    padding-left: 2rem;
-  }
   .pl-\[4rem\] {
     padding-left: 4rem;
+  }
+  .pl-\[6rem\] {
+    padding-left: 6rem;
   }
   .text-center {
     text-align: center;
@@ -1323,6 +1323,16 @@
   .md\:h-\[20rem\] {
     @media (width >= 48rem) {
       height: 20rem;
+    }
+  }
+  .md\:w-\[15rem\] {
+    @media (width >= 48rem) {
+      width: 15rem;
+    }
+  }
+  .md\:w-fit {
+    @media (width >= 48rem) {
+      width: fit-content;
     }
   }
   .md\:max-w-\[60vw\] {
