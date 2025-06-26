@@ -1,28 +1,11 @@
-// const { useId } = require("react")
-
-//1.Getting elements for account creation
-const form = document.querySelector("#sign-up-form")
-const userName = document.querySelector("#UserName")
-const firstName = form.querySelector("#firstName")
-const lastName = form.querySelector("#lastName")
-const email = form.querySelector("#email")
-const password = form.querySelector("#password")
-const createAccountBtn = form.querySelector("#createAccountBtn")
-const mainSection = document.querySelector("#sign-up-main-section")
-let userId = 0 //. initializing the first userId to zero
-
 //. the state manager that determines whether a user is logged in or not
 let loggedOut = JSON.parse(localStorage.getItem("loggedOutCloudVersion"))||true;
 
-//. the array of objects that would store user details in local storage
-let usersArray = JSON.parse(localStorage.getItem("usersArrayCloudVersion")) || [{id: 0,
-            userName:"",
-            firstName:"",
-            lastName: "",
-            email: "",
-            password:""}]
 
+//. selecting the main section of the html
+const mainSection = document.querySelector("#sign-up-main-section")
 //. so basically these are two contents that I would be dynamically updating depending on the state of loggedOut state manager
+
 let mainLoggedOut = (`
         <main class=" w-screen flex justify-center my-[3rem]">  
         <!-- Sign Up Card -->
@@ -200,8 +183,81 @@ let mainLoggedIn = (`
             </div>
     `)
 
+// function to toggle the content of the main
+let toggleMain = ()=>{
+if (loggedOut == false) {
+    mainSection.classList = ""; //clears all classes
+    mainSection.classList.add("bg-white",
+        "border-l",
+        "border-r",
+        "px-4",
+        "py-6",
+        "sm:px-6",
+        "sm:py-8",
+        "md:px-8",
+        "md:py-10",
+    )
+    mainSection.innerHTML = mainLoggedIn
+    }
+else {
+    mainSection.classList = "";//clear all white space again
+    mainSection.classList.add(
+        "w-screen",
+        "flex",
+        "justify-center",
+        "bg-white",
+        "md:my-[3rem]",
+        "p-8",
+    )
+    mainSection.innerHTML = mainLoggedOut
+    }
+}
+
+//.function to assign form
+let assignForm = ()=>{
+if(loggedOut){
+form = document.querySelector("#sign-up-form")
+}
+}
+assignForm()
+
+
+
+//1.Getting elements for account creation
+let form, userName, firstName, lastName, email, password, createAccountBtn
+
+
+
+//.selecting contents of form
+if (form){
+ userName = document.querySelector("#UserName")
+ firstName = form.querySelector("#firstName")
+ lastName = form.querySelector("#lastName")
+ email = form.querySelector("#email")
+ password = form.querySelector("#password")
+ createAccountBtn = form.querySelector("#createAccountBtn")
+}
+
+let userId = 0 //. initializing the first userId to zero
+
+
+
+
+//. the array of objects that would store user details in local storage
+let usersArray = JSON.parse(localStorage.getItem("usersArrayCloudVersion")) || [{id: 0,
+            userName:"",
+            firstName:"",
+            lastName: "",
+            email: "",
+            password:""}]
+
+
+
+    
+
 
 //. here the magic of creating users begins
+if (form = document.querySelector("#sign-up-form")){
 form.addEventListener("submit", (e) => {
     e.preventDefault()
     const userAlreadyExists = usersArray.some(user => user.userName == userName.value.trim())
@@ -250,20 +306,14 @@ form.addEventListener("submit", (e) => {
     )
     mainSection.innerHTML = mainLoggedIn
     
-}})
+}})}
+else{console.log("form is not created")}
 
-//. the conditional rendering manipulation begins    
-if (loggedOut == false) {
-    mainSection.classList = ""; //clears all classes
-    mainSection.classList.add("bg-white",
-        "border-l",
-        "border-r",
-        "px-4",
-        "py-6",
-        "sm:px-6",
-        "sm:py-8",
-        "md:px-8",
-        "md:py-10",
-    )
-    mainSection.innerHTML = mainLoggedIn
-    };
+
+toggleMain()
+
+
+
+
+
+

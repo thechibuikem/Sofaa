@@ -1,5 +1,3 @@
-<!--tablet in-between sec  -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -63,9 +61,9 @@ svg{
   </head>
 
   <!--==================== BODY STARTS HERE ===================-->
-  <body class="min-w-screen overflow-x-hidden  dark:bg-black dark:text-white">
+  <body class="min-w-screen overflow-x-hidden  dark:bg-black ">
     <!--======================== THE TOP SECTION ==============================-->
-    <header class="min-w-screen overflow-x-hidden">
+    <header class="min-w-screen overflow-x-hidden ">
       <aside
         id="aside"
         class="dark:bg-white bg-black dark:text-black dark:border-b dark:border-[#00000030] text-white flex items-center justify-center min-h-[3rem] relative"
@@ -89,7 +87,7 @@ svg{
       </aside>
       <!--=================================== the nav bar ====================================-->
       <nav
-        class="flex justify-between items-center px-[1rem] sm:px-[2rem] md:px-[3rem] lg:py-[3rem] h-[3.5rem]"
+        class="flex justify-between items-center px-[1rem] sm:px-[2rem] md:px-[3rem] lg:py-[3rem] h-[3.5rem] dark:text-white"
       >
         <div id="grp-1" class="flex items-center gap-x-4">
           <svg
@@ -106,6 +104,7 @@ svg{
               stroke-linejoin="round"
               stroke-width="1"
               d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
+              class="dark:stroke-white"
             />
           </svg>
               <a class="text-3xl font-bold cursor-pointer" href="index.html">SOFA</a>
@@ -126,6 +125,7 @@ svg{
                   stroke-linejoin="round"
                   stroke-width="2"
                   d="m4 8l8 8l8-8"
+                  class="dark:stroke-white"
                 />
               </svg>
             </li>
@@ -147,12 +147,13 @@ svg{
               <path
                 fill="#00000030"
                 d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0s.41-1.08 0-1.49zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"
+                class="dark:fill-white/30"
               />
             </svg>
             <input
               type="text"
               placeholder="Search for products"
-              class="w-[32rem] bg-gray-200 py-[1rem] rounded-full pl-[4rem] dark:bg-neutral-800"
+              class="w-[32rem] bg-gray-200 py-[1rem] rounded-full pl-[4rem] dark:bg-neutral-800 dark:text-white dark:placeholder-gray-400"
               id="products-search-bar"
             />
           </span>
@@ -212,7 +213,7 @@ svg{
       <!-- main hero starts -->
       <section
         id="hero"
-        class="flex flex-col sm:flex-row pt-[2rem] sm:pt-[3rem] md:pt-[4rem] md:ml-[1rem] lg:pl-[4rem] w-full bg-gray-200 dark:border-[#ffffff50] md:dark:border-1 dark:bg-black rounded-tl-xl"
+        class="flex flex-col sm:flex-row pt-[2rem] sm:pt-[3rem] md:pt-[4rem] md:ml-[1rem] lg:pl-[4rem] w-full bg-gray-200 rounded-tl-xl dark:border-[#ffffff50] md:dark:border-1 dark:bg-black dark:text-white "
       >
         <!-- hero grp1 starts here -->
         <div
@@ -288,7 +289,7 @@ svg{
       <button
         onclick="window.location.href='productsListingPage.html'"
         id="new-arrival-button-to-see-more"
-        class="border-1 border-[#00000030] text-md dark:text-white capitalize w-[90%] sm:w-[15rem] dark:bg-[#000000ec] rounded-full py-[1rem] block mx-auto sm:mx-[1rem] my-[4rem] cursor-pointer"
+        class="border-1 border-[#00000030] text-md dark:text-white capitalize w-[90%] sm:w-[15rem] dark:bg-[#000000ec] rounded-full py-[1rem] block mx-auto sm:mx-[1rem] my-[4rem] cursor-pointer dark:border-[#ffffff50] dark:border-1"
       >
         view all
       </button>
@@ -314,7 +315,7 @@ svg{
       <button
         onclick="window.location.href='productsListingPage.html'"
         id="top-selling-button-to-see-more"
-        class="border-1 border-[#00000030] text-md dark:text-white capitalize w-[90%] sm:w-[15rem] dark:bg-[#000000ec] rounded-full py-[1rem] block mx-auto sm:mx-[1rem] my-[4rem] cursor-pointer"
+        class="border-1 border-[#00000030] text-md dark:text-white capitalize w-[90%] sm:w-[15rem] dark:bg-[#000000ec] rounded-full py-[1rem] block mx-auto sm:mx-[1rem] my-[4rem] cursor-pointer dark:border-[#ffffff50] dark:border-1"
       >
         view all
       </button>
@@ -323,7 +324,7 @@ svg{
     <!--====================== the browse by dress style section ======================-->
     <section
       id="browse-by-dress-section"
-      class="flex flex-col items-center bg-gray-200 w-[90%] h-auto mx-[1rem] md:mx-[4rem] mt-[6rem] pb-[4rem] rounded-3xl dark:bg-black dark:border-[#ffffff50] dark:border-1"
+      class="flex flex-col items-center bg-gray-200 w-[90%] h-auto mx-[1rem] md:mx-[4rem] mt-[6rem] pb-[4rem] rounded-3xl dark:bg-black dark:border-[#ffffff50] dark:border-1 dark:text-white"
     >
       <h3
         id="new-arrivals-section-title"
@@ -334,29 +335,29 @@ svg{
 
       <section
         id="browse-by-dress-section-sub-section"
-        class="grid grid-rows-4 md:grid-rows-2 md:grid-cols-3 gap-2 md:gap-6 w-[90%]"
+        class="grid grid-rows-4 md:grid-rows-2 md:grid-cols-3 gap-2 md:gap-6 w-[90%] dark:text-white"
       >
         <!-- figure 1 -->
         <figure
-          class="flex justify-start bg-[url('./images/homepage/browseByCategory/casual.jpg')] h-[15rem] md:h-[20rem] w-full bg-no-repeat bg-white bg-cover rounded-xl p-4 text-2xl md:text-4xl font-medium"
+          class="flex justify-start bg-[url('./images/homepage/browseByCategory/casual.jpg')] h-[15rem] md:h-[20rem] w-full bg-no-repeat bg-white bg-cover rounded-xl p-4 text-2xl md:text-4xl font-medium dark:bg-neutral-800"
         >
           casual
         </figure>
         <!-- figure 2 -->
         <figure
-          class="flex justify-start bg-[url('/images/homepage/browseByCategory/formal.png')] h-[15rem] md:h-[20rem] w-full md:col-span-2 bg-no-repeat bg-white bg-cover rounded-xl p-4 text-2xl md:text-4xl font-medium"
+          class="flex justify-start bg-[url('/images/homepage/browseByCategory/formal.png')] h-[15rem] md:h-[20rem] w-full md:col-span-2 bg-no-repeat bg-white bg-cover rounded-xl p-4 text-2xl md:text-4xl font-medium dark:bg-neutral-800"
         >
           formal
         </figure>
         <!-- figure 3 -->
         <figure
-          class="flex justify-start bg-[url('/images/homepage/browseByCategory/party.png')] h-[15rem] md:h-[20rem] w-full md:col-span-2 bg-no-repeat bg-left-bottom bg-white bg-cover rounded-xl p-4 text-2xl md:text-4xl font-medium"
+          class="flex justify-start bg-[url('/images/homepage/browseByCategory/party.png')] h-[15rem] md:h-[20rem] w-full md:col-span-2 bg-no-repeat bg-left-bottom bg-white bg-cover rounded-xl p-4 text-2xl md:text-4xl font-medium dark:bg-neutral-800 "
         >
           party
         </figure>
         <!-- figure4 -->
         <figure
-          class="flex justify-start bg-[url('/images/homepage/browseByCategory/gym.png')] h-[15rem] md:h-[20rem] w-full bg-no-repeat bg-right-bottom bg-white bg-cover rounded-xl p-4 text-2xl md:text-4xl font-medium"
+          class="flex justify-start bg-[url('/images/homepage/browseByCategory/gym.png')] h-[15rem] md:h-[20rem] w-full bg-no-repeat bg-right-bottom bg-white bg-cover rounded-xl p-4 text-2xl md:text-4xl font-medium dark:bg-neutral-800"
         >
           gym
         </figure>
@@ -365,7 +366,7 @@ svg{
     <!--=================== TESTIMONIALS ===========================-->
     <section
       id="testimonial-section"
-      class="mt-[6rem] flex flex-col gap-y-12 mx-[1rem] md:mx-[4rem] overflow-scroll"
+      class="mt-[6rem] flex flex-col gap-y-12 mx-[1rem] md:mx-[4rem] overflow-scroll dark:text-white"
     >
       <div id="testimonial-heading" class="flex md:mx-16 justify-between">
         <h3
@@ -391,6 +392,7 @@ svg{
                 stroke-linejoin="round"
                 stroke-width="2"
                 d="m6 8l-4 4l4 4m-4-4h20"
+                class="dark:stroke-white"
               />
             </svg>
           </button>
@@ -409,6 +411,7 @@ svg{
                 stroke-linejoin="round"
                 stroke-width="2"
                 d="m18 8l4 4l-4 4M2 12h20"
+                class="dark:stroke-white"
               />
             </svg>
           </button>
@@ -419,7 +422,7 @@ svg{
         <!-- where the cards come into to -->
       </div>
     </section>
-    <!--================= FOOTER ===========================-->
+       <!--================= FOOTER ===========================-->
     <footer
       class="flex flex-col items-center px-[1rem] sm:px-[2rem] md:px-[4rem] sm:mt-[3rem] mt-[10rem] md:mt-[10rem] bg-gray-200 dark:bg-[#000002] dark:border-[#ffffff50] dark:border-t-1"
     >
@@ -427,7 +430,7 @@ svg{
       <figure
         class="flex flex-col justify-center gap-y-[2rem] md:flex-col bg-[#000002] p-6 rounded-2xl transform -translate-y-1/4 dark:border-[#ffffff50] dark:border-1"
       >
-        <h3 class="text-3xl md:text-4xl text-[#fffff3] font-bold uppercase">
+        <h3 class="text-3xl md:text-4xl text-[#fffff3] font-bold uppercase dark:text-black">
           stay up to date about our latest offers
         </h3>
 
@@ -464,12 +467,12 @@ svg{
 
       <!-- Footer grid section -->
       <div
-        class="grid grid-cols-2 md:grid-cols-5 gap-y-[2rem] gap-x-6 w-full pb-8 mt-[3rem]"
+        class="grid grid-cols-2 md:grid-cols-5 gap-y-[2rem] gap-x-6 w-full pb-8 mt-[3rem] dark:text-white"
       >
         <!-- Company info -->
         <figure class="col-span-2 md:col-span-1">
           <h4 class="text-3xl font-bold uppercase mb-4">SOFA</h4>
-          <h6 class="text-gray-600 mb-6 max-w-xs">
+          <h6 class="text-gray-600 dark:text-gray-300 mb-6 max-w-xs">
             We have clothes that suits your style and which you're proud to
             wear. From women to men.
           </h6>
@@ -493,6 +496,7 @@ svg{
                   stroke-linejoin="round"
                   stroke-width="1.5"
                   color="#262626"
+                  class="dark:stroke-white"
                 >
                   <path
                     d="m7 17l4.194-4.193M17 7l-4.193 4.194m0 0L9.777 7H7l4.194 5.807m1.612-1.614L17 17h-2.778l-3.028-4.193"
@@ -511,7 +515,7 @@ svg{
                 height="40"
                 viewBox="0 0 32 32"
               >
-                <g fill="#262626">
+                <g fill="#262626" class="dark:fill-white">
                   <path
                     d="M16-.034C7.159-.034-.035 7.158-.035 16S7.159 32.034 16 32.034S32.035 24.842 32.035 16S24.841-.034 16-.034m0 31C7.748 30.966 1.035 24.252 1.035 16S7.748 1.034 16 1.034S30.965 7.748 30.965 16S24.252 30.966 16 30.966"
                   />
@@ -534,6 +538,7 @@ svg{
               >
                 <path
                   fill="#262626"
+                  class="dark:fill-white"
                   d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9S287.7 141 224.1 141m0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7s74.7 33.5 74.7 74.7s-33.6 74.7-74.7 74.7m146.4-194.3c0 14.9-12 26.8-26.8 26.8c-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8s26.8 12 26.8 26.8m76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9c-26.2-26.2-58-34.4-93.9-36.2c-37-2.1-147.9-2.1-184.9 0c-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9c1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0c35.9-1.7 67.7-9.9 93.9-36.2c26.2-26.2 34.4-58 36.2-93.9c2.1-37 2.1-147.8 0-184.8M398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6c-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6c-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6c29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6c11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"
                 />
               </svg>
@@ -555,6 +560,7 @@ svg{
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="1.5"
+                  class="dark:stroke-white"
                 >
                   <path
                     d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10"
@@ -574,20 +580,16 @@ svg{
         <ul class="space-y-3">
           <li class="font-semibold uppercase text-sm mb-4">COMPANY</li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm">About</a>
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">About</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Features</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Features</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm">Works</a>
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Works</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Career</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Career</a>
           </li>
         </ul>
 
@@ -595,24 +597,16 @@ svg{
         <ul class="space-y-3">
           <li class="font-semibold uppercase text-sm mb-4">HELP</li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Customer Support</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Customer Support</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Delivery Details</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Delivery Details</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Terms & Conditions</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Terms & Conditions</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Privacy Policy</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Privacy Policy</a>
           </li>
         </ul>
 
@@ -620,24 +614,16 @@ svg{
         <ul class="space-y-3">
           <li class="font-semibold uppercase text-sm mb-4">FAQ</li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Account</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Account</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Manage Deliveries</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Manage Deliveries</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Orders</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Orders</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Payments</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Payments</a>
           </li>
         </ul>
 
@@ -645,28 +631,20 @@ svg{
         <ul class="space-y-3">
           <li class="font-semibold uppercase text-sm mb-4">RESOURCES</li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Free eBooks</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Free eBooks</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Development Tutorial</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Development Tutorial</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >How to - Blog</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">How to - Blog</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >YouTube Playlist</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">YouTube Playlist</a>
           </li>
         </ul>
       </div>
-    </footer>
+    </footer> 
 
     <!--=================== SCRIPT ===========================-->
     <!-- hero script -->

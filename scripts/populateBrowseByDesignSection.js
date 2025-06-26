@@ -35,6 +35,7 @@ let createDesign = (wrapper, design) => {
   const designELement = document.createElement("figure");
   designELement.setAttribute("id", `designElement${id}`);
   designELement.classList.add(
+    "dark:bg-neutral-800",
     "flex",
     "justify-start",
     `bg-[url('./images/homepage/browseByCategory/${title}.png')]`,
@@ -50,7 +51,6 @@ let createDesign = (wrapper, design) => {
     "md:text-4xl",
     "font-medium",
     "p-4",
-    " ",
   );
   designELement.innerHTML = `
         <!-- figure ${id} -->
@@ -59,20 +59,9 @@ let createDesign = (wrapper, design) => {
         
         // appending the child to the wrapper
         wrapper.appendChild(designELement);
-
-
-  // // getting the grid items that would span more than the others
-  // const gridElement2 = document.querySelector("#designElement2");
-  // const gridElement3 = document.querySelector("#designElement3");
-
-  // // adding the span classes to them
-  // gridElement2.classList.add("md:col-span-2");
-  // gridElement3.classList.add("md:col-span-2");
-
 };
-
-  
 
 browseByDesignWrapperFiller.forEach((design) =>
   createDesign(browseByDesignWrapper, design)
 );
+

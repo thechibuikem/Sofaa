@@ -24,14 +24,18 @@ font-weight: 300;
 color: #00000071;
 }
 
+.dark .no-item-text{
+  color: #ffffff71;
+}
+
     </style>
   </head>
-  <body class="min-w-screen overflow-x-hidden">
+  <body class="min-w-screen overflow-x-hidden dark:bg-black">
     <!--======================== THE TOP SECTION ==============================-->
     <header id="header" class="min-w-screen overflow-x-hidden">
       <aside
         id="aside"
-        class="dark:bg-white bg-black dark:text-black text-white flex items-center justify-center min-h-[3rem] relative"
+        class="dark:bg-white bg-black dark:text-black dark:border-b dark:border-[#00000030] text-white flex items-center justify-center min-h-[3rem] relative"
       >
         <!--========================= GROUPS INSIDE ASIDE ======================-->
         <div
@@ -52,7 +56,7 @@ color: #00000071;
       </aside>
       <!--=================================== the nav bar ====================================-->
       <nav
-        class="flex justify-between items-center px-[1rem] sm:px-[2rem] md:px-[3rem] lg:py-[3rem] h-[3.5rem] border-b border-b-[#00000050]"
+        class="flex justify-between items-center px-[1rem] sm:px-[2rem] md:px-[3rem] lg:py-[3rem] h-[3.5rem] border-b border-b-[#00000050] dark:border-b-[#ffffff50] dark:text-white"
       >
         <div id="grp-1" class="flex items-center gap-x-4">
           <svg
@@ -69,6 +73,7 @@ color: #00000071;
               stroke-linejoin="round"
               stroke-width="1"
               d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
+              class="dark:stroke-white"
             />
           </svg>  
             <a class="text-3xl font-bold cursor-pointer" href="index.html">SOFA</a>
@@ -89,6 +94,7 @@ color: #00000071;
                   stroke-linejoin="round"
                   stroke-width="2"
                   d="m4 8l8 8l8-8"
+                  class="dark:stroke-white"
                 />
               </svg>
             </li>
@@ -110,23 +116,24 @@ color: #00000071;
               <path
                 fill="#00000030"
                 d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0s.41-1.08 0-1.49zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"
+                class="dark:fill-white/30"
               />
             </svg>
             <input
               type="text"
               placeholder="Search for products"
-              class="w-[32rem] bg-gray-200 py-[1rem] rounded-full pl-[4rem]"
+              class="w-[32rem] bg-gray-200 dark:bg-neutral-800 dark:text-white dark:placeholder-gray-400 py-[1rem] rounded-full pl-[4rem]"
               id="products-search-bar"
             />
           </span>
           <!--================== SEARCH RESULTS WRAPPER  =================================-->
           <figure
             id="search-result-wrapper"
-            class="hidden flex-col p-[2rem] bg-gray-200 absolute w-[20rem] min-h-[5rem] right-1/6 top-[4rem] h-[auto] shadow-md gap-y-[0.5rem]"
+            class="hidden flex-col p-[2rem] bg-gray-200 dark:bg-neutral-800 absolute w-[20rem] min-h-[5rem] right-1/6 top-[4rem] h-[auto] shadow-md gap-y-[0.5rem]"
           ></figure>
         </div>
         <!--===================== the group 3 starts here well on mobile it's hypothetically group 2 because one of the groups are disabled =======================-->
-        <div id="grp-3" class="flex">
+        <div id="grp-3" class="flex dark:invert">
           <!--======================== search icon =========================-->
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -173,8 +180,8 @@ color: #00000071;
       </nav>
 
       <!--========================== SHOWING HIERARCHY TO CART ============================-->
-      <div class="flex gap-x-2 lg:gap-x-4 items-center ml-6 md:ml-14 lg:ml-12 mt-8">
-        <a href="index.html"><h3 class="capitalize text-xl text-[#00000050]">home</h3></a>
+      <div class="flex gap-x-2 lg:gap-x-4 items-center ml-6 md:ml-14 lg:ml-12 mt-8 dark:text-white">
+        <a href="index.html"><h3 class="capitalize text-xl text-[#00000050] dark:text-[#ffffff50]">home</h3></a>
         <a href="cart.html" class="flex  gap-x-2 lg:gap-x-4 items-center">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
             <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
@@ -188,16 +195,16 @@ color: #00000071;
 
     <!--===================== MAIN ==========================-->
     <main class="h-auto md:mb-[3rem]  w-[90%] mx-auto mt-[2rem] lg:mt-[3rem]">
-      <header class="text-3xl lg:text-4xl lg:mb-12 font-bold uppercase mb-4 ">
+      <header class="text-3xl lg:text-4xl lg:mb-12 font-bold uppercase mb-4 dark:text-white">
         your cart
 
       </header>
-<section class="h-auto grid grid-cols-1 lg:grid-cols-4 bg-gray-100 px-4  lg:px-8 py-16 gap-y-[2rem] lg:gap-y-[4rem] lg:gap-x-[2rem] rounded-md" id="wrapper-for-cart-figures">
+<section class="h-auto grid grid-cols-1 lg:grid-cols-4 bg-gray-100 dark:bg-neutral-800 px-4  lg:px-8 py-16 gap-y-[2rem] lg:gap-y-[4rem] lg:gap-x-[2rem] rounded-md" id="wrapper-for-cart-figures">
  
 <!-- figures -->
 </section>
 <!-- checkout section -->
-<section class=" lg:gap-y-[4rem] lg:gap-x-[4rem] lg:px-8  h-auto border-1 border-gray-200 px-4 py-6 gap-y-[2rem]  rounded-md mt-[2rem]">
+<section class=" lg:gap-y-[4rem] lg:gap-x-[4rem] lg:px-8  h-auto border-1 border-gray-200  px-4 py-6 gap-y-[2rem]  rounded-md mt-[2rem] dark:border-gray-600 dark:text-white">
   <div class="top">
     <div class="flex flex-col gap-y-[1rem]">
       <h5 class="text-2xl">Order Summary</h5>
@@ -224,16 +231,16 @@ color: #00000071;
     </span> 
     <span class="flex w-[100%] gap-x-6">
       <div class="w-[40%] relative">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4 absolute top-[2.3rem] left-[0.75rem]">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4 absolute top-[2.3rem] left-[0.75rem] dark:fill-black">
   <path fill-rule="evenodd" d="M3.75 3.5c0 .563.186 1.082.5 1.5H2a1 1 0 0 0 0 2h5.25V5h1.5v2H14a1 1 0 1 0 0-2h-2.25A2.5 2.5 0 0 0 8 1.714 2.5 2.5 0 0 0 3.75 3.5Zm3.499 0v-.038A1 1 0 1 0 6.25 4.5h1l-.001-1Zm2.5-1a1 1 0 0 0-1 .962l.001.038v1h.999a1 1 0 0 0 0-2Z" clip-rule="evenodd" />
   <path d="M7.25 8.5H2V12a2 2 0 0 0 2 2h3.25V8.5ZM8.75 14V8.5H14V12a2 2 0 0 1-2 2H8.75Z" />
 </svg>
 
         <input type="text" placeholder="Code" class="w-full sm:w-[15rem] dark:bg-white dark:text-black sm:mx-[1rem] flex justify-center items-center text-md text-gray-800 capitalize bg-gray-100 rounded-full py-[1rem] pl-[2rem] mx-auto mt-[1rem] cursor-pointer" >
       </div>
-      <button class="sm:w-[15rem] dark:bg-white dark:text-black sm:mx-[1rem] flex justify-center items-center gap-x-4 text-md text-white capitalize w-[60%] bg-[#000000ec] rounded-full py-[1rem] mx-auto mt-[1rem] cursor-pointer">Apply</button>
+      <button class="sm:w-[15rem] dark:bg-white dark:text-black sm:mx-[1rem] flex justify-center items-center gap-x-4 text-md text-white capitalize w-[60%] bg-[#000000ec] rounded-full py-[1rem] mx-auto mt-[1rem] cursor-pointer hover:opacity-90 transition-opacity">Apply</button>
     </span>
-    <button class="sm:w-[15rem] dark:bg-white dark:text-black sm:mx-[1rem] flex justify-center items-center gap-x-4 text-md  text-white capitalize w-[100%]  bg-[#000000ec] rounded-full py-[1rem] mx-auto mt-[1rem] cursor-pointer">
+    <button class="sm:w-[15rem] dark:bg-white dark:text-black sm:mx-[1rem] flex justify-center items-center gap-x-4 text-md  text-white capitalize w-[100%]  bg-[#000000ec] rounded-full py-[1rem] mx-auto mt-[1rem] cursor-pointer hover:opacity-90 transition-opacity">
       Go to checkout
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
   <path fill-rule="evenodd" d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd" />
@@ -248,11 +255,11 @@ color: #00000071;
 
     <!--================= FOOTER ===========================-->
     <footer
-      class="flex flex-col items-center px-[1rem] sm:px-[2rem] md:px-[4rem] sm:mt-[3rem] mt-[10rem] md:mt-[10rem] bg-gray-200"
+      class="flex flex-col items-center px-[1rem] sm:px-[2rem] md:px-[4rem] sm:mt-[3rem] mt-[10rem] md:mt-[10rem] bg-gray-200 dark:bg-[#000002] dark:border-[#ffffff50] dark:border-t-1"
     >
       <!--===================== newsletter pull-up ==================-->
       <figure
-        class="flex flex-col justify-center gap-y-[2rem] md:flex-col bg-[#000002] p-6 rounded-2xl transform -translate-y-1/4"
+        class="flex flex-col justify-center gap-y-[2rem] md:flex-col bg-[#000002] p-6 rounded-2xl transform -translate-y-1/4 dark:border-[#ffffff50] dark:border-1"
       >
         <h3 class="text-3xl md:text-4xl text-[#fffff3] font-bold uppercase">
           stay up to date about our latest offers
@@ -281,7 +288,7 @@ color: #00000071;
             />
           </div>
           <button
-            class="bg-[#fff] py-[1rem] rounded-full w-full text-center capitalize"
+            class="bg-[#fff] py-[1rem] rounded-full w-full text-center capitalize hover:bg-gray-100 transition-colors"
           >
             subscribe to Newsletter
           </button>
@@ -291,12 +298,12 @@ color: #00000071;
 
       <!-- Footer grid section -->
       <div
-        class="grid grid-cols-2 md:grid-cols-5 gap-y-[2rem] gap-x-6 w-full pb-8 mt-[3rem]"
+        class="grid grid-cols-2 md:grid-cols-5 gap-y-[2rem] gap-x-6 w-full pb-8 mt-[3rem] dark:text-white"
       >
         <!-- Company info -->
         <figure class="col-span-2 md:col-span-1">
           <h4 class="text-3xl font-bold uppercase mb-4">SOFA</h4>
-          <h6 class="text-gray-600 mb-6 max-w-xs">
+          <h6 class="text-gray-600 dark:text-gray-300 mb-6 max-w-xs">
             We have clothes that suits your style and which you're proud to
             wear. From women to men.
           </h6>
@@ -320,6 +327,7 @@ color: #00000071;
                   stroke-linejoin="round"
                   stroke-width="1.5"
                   color="#262626"
+                  class="dark:stroke-white"
                 >
                   <path
                     d="m7 17l4.194-4.193M17 7l-4.193 4.194m0 0L9.777 7H7l4.194 5.807m1.612-1.614L17 17h-2.778l-3.028-4.193"
@@ -338,7 +346,7 @@ color: #00000071;
                 height="40"
                 viewBox="0 0 32 32"
               >
-                <g fill="#262626">
+                <g fill="#262626" class="dark:fill-white">
                   <path
                     d="M16-.034C7.159-.034-.035 7.158-.035 16S7.159 32.034 16 32.034S32.035 24.842 32.035 16S24.841-.034 16-.034m0 31C7.748 30.966 1.035 24.252 1.035 16S7.748 1.034 16 1.034S30.965 7.748 30.965 16S24.252 30.966 16 30.966"
                   />
@@ -361,6 +369,7 @@ color: #00000071;
               >
                 <path
                   fill="#262626"
+                  class="dark:fill-white"
                   d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9S287.7 141 224.1 141m0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7s74.7 33.5 74.7 74.7s-33.6 74.7-74.7 74.7m146.4-194.3c0 14.9-12 26.8-26.8 26.8c-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8s26.8 12 26.8 26.8m76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9c-26.2-26.2-58-34.4-93.9-36.2c-37-2.1-147.9-2.1-184.9 0c-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9c1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0c35.9-1.7 67.7-9.9 93.9-36.2c26.2-26.2 34.4-58 36.2-93.9c2.1-37 2.1-147.8 0-184.8M398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6c-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6c-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6c29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6c11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"
                 />
               </svg>
@@ -382,6 +391,7 @@ color: #00000071;
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="1.5"
+                  class="dark:stroke-white"
                 >
                   <path
                     d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10"
@@ -401,20 +411,16 @@ color: #00000071;
         <ul class="space-y-3">
           <li class="font-semibold uppercase text-sm mb-4">COMPANY</li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm">About</a>
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">About</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Features</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Features</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm">Works</a>
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Works</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Career</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Career</a>
           </li>
         </ul>
 
@@ -422,24 +428,16 @@ color: #00000071;
         <ul class="space-y-3">
           <li class="font-semibold uppercase text-sm mb-4">HELP</li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Customer Support</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Customer Support</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Delivery Details</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Delivery Details</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Terms & Conditions</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Terms & Conditions</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Privacy Policy</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Privacy Policy</a>
           </li>
         </ul>
 
@@ -447,24 +445,16 @@ color: #00000071;
         <ul class="space-y-3">
           <li class="font-semibold uppercase text-sm mb-4">FAQ</li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Account</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Account</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Manage Deliveries</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Manage Deliveries</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Orders</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Orders</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Payments</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Payments</a>
           </li>
         </ul>
 
@@ -472,24 +462,16 @@ color: #00000071;
         <ul class="space-y-3">
           <li class="font-semibold uppercase text-sm mb-4">RESOURCES</li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Free eBooks</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Free eBooks</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >Development Tutorial</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Development Tutorial</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >How to - Blog</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">How to - Blog</a>
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black text-sm"
-              >YouTube Playlist</a
-            >
+            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">YouTube Playlist</a>
           </li>
         </ul>
       </div>

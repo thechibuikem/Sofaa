@@ -11,7 +11,8 @@ module.exports = {
     "sm:mb-6",
     "text-blue-600 ",
     "dark:border-1",
-    "testimonialcardstyling",
+"dark:border-[#ffffff50]",
+"dark:bg-neutral-800"
     // add any other JS-based classes here
   ],
   theme: {

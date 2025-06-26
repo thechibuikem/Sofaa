@@ -62,8 +62,8 @@ let createCartObject = (item) => {
           </svg>
         </button>
       </div>
-      <p class="text-sm text-gray-500">Size: <span class="text-black">Large</span></p>
-      <p class="text-sm text-gray-500">Color: <span class="text-black">White</span></p>
+      <p class="text-sm text-gray-500">Size: <span class="">Large</span></p>
+      <p class="text-sm text-gray-500">Color: <span class="">White</span></p>
       <div class="flex justify-between gap-x-4 items-center mt-2">
         <span class="text-xl font-semibold cart-item-price">$${itemPrice(item)}</span>
     `
@@ -136,7 +136,12 @@ cartArray.forEach((item) => {
     "shadow",
     "flex",
     "items-start",
-    "gap-x-4"
+    "gap-x-4",
+    "dark:bg-black",
+    "dark:border-[#ffffff50]",
+    "dark:border-1",
+    "dark:bg-[#000002]",
+    "dark:text-white"
   );
   cartObject.style.width="17rem"
 
