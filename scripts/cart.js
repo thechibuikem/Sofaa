@@ -9,29 +9,21 @@ const totalCostDisplayer = document.querySelector("#cart-total")
 
 //creating a no item text to display if the cart is empty
 const noItemText = document.createElement("h1")
-noItemText.classList.add("no-item-text")
+noItemText.classList.add(
+  "no-item-text",
+)
 noItemText.innerHTML = `
 Opps ... You haven't added any contents to cart yet
 `;  
 
-
-// This is the wrapper that will hold all the cart items with counter updated to it
-
-//Getting my cartArray using array.map which is a mashup of my cart(cart) and productsArray
-// const cartArray = cart.map((item) => {
-//   const cartItem = productsArray[item.productIndex];
-//  return{ ...cartItem,
-//   counter:item.quantity
-//  }
-// })
-
+// function to dictate whats in the cart array.
 const getFreshCartArray =()=>{
   return cart.map(item =>{
     const cartItem = productsArray[item.productIndex];
     return{...cartItem,counter:item.quantity}
   })
 };
-
+// intialization of cart array from our function
 let cartArray = getFreshCartArray()
 
 //.1 function to create cart object
@@ -120,8 +112,10 @@ cartArray.forEach(item =>{
   }
 })
 
+// calculating delivery fee
 const deliveryFee = Math.round(subTotalPrice * 0.005)
 
+// calculating net cost
 const totalCost = Math.round( subTotalPrice + deliveryFee - discountStorer)
 
 //delivery fee section
@@ -129,9 +123,6 @@ subTotalPriceDisplayer.innerHTML = `$${subTotalPrice}`
 deliveryFeeDisplayer.innerHTML = `$${deliveryFee}`
 discountDisplayer.innerHTML = `$${discountStorer}`
 totalCostDisplayer.innerHTML = `$${totalCost}`
-
-
-console.log("loadTotal called");
 
 }
 
