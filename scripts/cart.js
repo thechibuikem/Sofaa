@@ -7,8 +7,6 @@ const discountDisplayer = document.querySelector("#cart-discount")
 const deliveryFeeDisplayer = document.querySelector("#cart-delivery-fee")
 const totalCostDisplayer = document.querySelector("#cart-total")
 
-
-
 //creating a no item text to display if the cart is empty
 const noItemText = document.createElement("h1")
 noItemText.classList.add("no-item-text")
@@ -20,12 +18,21 @@ Opps ... You haven't added any contents to cart yet
 // This is the wrapper that will hold all the cart items with counter updated to it
 
 //Getting my cartArray using array.map which is a mashup of my cart(cart) and productsArray
-const cartArray = cart.map((item) => {
-  const cartItem = productsArray[item.productIndex];
- return{ ...cartItem,
-  counter:item.quantity
- }
-})
+// const cartArray = cart.map((item) => {
+//   const cartItem = productsArray[item.productIndex];
+//  return{ ...cartItem,
+//   counter:item.quantity
+//  }
+// })
+
+const getFreshCartArray =()=>{
+  return cart.map(item =>{
+    const cartItem = productsArray[item.productIndex];
+    return{...cartItem,counter:item.quantity}
+  })
+};
+
+let cartArray = getFreshCartArray()
 
 //.1 function to create cart object
 let createCartObject = (item) => {
@@ -62,8 +69,8 @@ let createCartObject = (item) => {
           </svg>
         </button>
       </div>
-      <p class="text-sm text-gray-500">Size: <span class="">Large</span></p>
-      <p class="text-sm text-gray-500">Color: <span class="">White</span></p>
+      <p class="text-sm text-gray-500">Size: <span class="text-black">Large</span></p>
+      <p class="text-sm text-gray-500">Color: <span class="text-black">White</span></p>
       <div class="flex justify-between gap-x-4 items-center mt-2">
         <span class="text-xl font-semibold cart-item-price">$${itemPrice(item)}</span>
     `
@@ -73,7 +80,7 @@ let createCartObject = (item) => {
   let quantityDetailsCaller = (item) => {
     return `
        <!-- Quantity Controls -->
-        <div class="flex items-center gap-x-2 border border-[#00000020] rounded-full px-3 py-1">
+        <div class="flex items-center gap-x-2 border border-[#00000020] rounded-full px-3 py-1 dark:border-[#ffffff50] dark:border-1">
           <button class="text-xl cursor-pointer quantity-reduce-button" id="">−</button>
           <span class="quantity-displayer">${counter}</span>
           <button class="text-xl cursor-pointer quantity-increase-button " id="">+</button>
@@ -96,6 +103,8 @@ let createCartObject = (item) => {
 
 //function for cart checkout computation of prices and stuff
 let loadCartPrices = () =>{
+cartArray = getFreshCartArray();
+
 
 const subTotalPrice = cartArray.reduce((sum, item)=>
   {return sum + (item.price * item.counter)},0
@@ -120,6 +129,9 @@ subTotalPriceDisplayer.innerHTML = `$${subTotalPrice}`
 deliveryFeeDisplayer.innerHTML = `$${deliveryFee}`
 discountDisplayer.innerHTML = `$${discountStorer}`
 totalCostDisplayer.innerHTML = `$${totalCost}`
+
+
+console.log("loadTotal called");
 
 }
 
@@ -169,9 +181,10 @@ document.addEventListener("DOMContentLoaded", () => {
       cart.splice(parseInt(figure.dataset.index), 1);
       localStorage.setItem("cart", JSON.stringify(cart));
       figure.remove();
-    }
+      loadCartPrices()
+    };
 
-    loadCartPrices()
+    
   });
 
   
