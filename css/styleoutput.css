@@ -851,11 +851,11 @@
   .pb-\[4rem\] {
     padding-bottom: 4rem;
   }
+  .pl-\[2rem\] {
+    padding-left: 2rem;
+  }
   .pl-\[4rem\] {
     padding-left: 4rem;
-  }
-  .pl-\[6rem\] {
-    padding-left: 6rem;
   }
   .text-center {
     text-align: center;
@@ -1418,6 +1418,11 @@
   .md\:pt-\[6rem\] {
     @media (width >= 48rem) {
       padding-top: 6rem;
+    }
+  }
+  .md\:pl-\[6rem\] {
+    @media (width >= 48rem) {
+      padding-left: 6rem;
     }
   }
   .md\:text-3xl {
