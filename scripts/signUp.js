@@ -1,12 +1,12 @@
 //. the state manager that determines whether a user is logged in or not
-let loggedOut = JSON.parse(localStorage.getItem("loggedOutCloudVersion"))||true;
-
+let loggedOut =
+  JSON.parse(localStorage.getItem("loggedOutCloudVersion")) || true;
 
 //. selecting the main section of the html
-const mainSection = document.querySelector("#sign-up-main-section")
+const mainSection = document.querySelector("#sign-up-main-section");
 //. so basically these are two contents that I would be dynamically updating depending on the state of loggedOut state manager
 
-let mainLoggedOut = (`
+let mainLoggedOut = `
         <main class=" w-screen flex justify-center my-[3rem]">  
         <!-- Sign Up Card -->
         <figure class="sm:border-2 sm:border-[#00000050] bg-white border-none rounded-lg sm:shadow-md p-8 max-w-md">
@@ -165,8 +165,8 @@ let mainLoggedOut = (`
             </div>
         </figure>
     </main>
-    `)
-let mainLoggedIn = (`
+    `;
+let mainLoggedIn = `
             <div class="text-center">
                 <!-- Main message with highlighted username -->
                 <p class="text-md sm:text-base md:text-3xl text-gray-800 mb-4 sm:mb-6 leading-relaxed">
@@ -181,120 +181,111 @@ let mainLoggedIn = (`
                     Log out
                 </button>
             </div>
-    `)
+    `;
 
 // function to toggle the content of the main
-let toggleMain = ()=>{
-if (loggedOut == false) {
+let toggleMain = () => {
+  if (loggedOut == false) {
     mainSection.classList = ""; //clears all classes
-    mainSection.classList.add("bg-white",
-        "border-l",
-        "border-r",
-        "px-4",
-        "py-6",
-        "sm:px-6",
-        "sm:py-8",
-        "md:px-8",
-        "md:py-10",
-    )
-    mainSection.innerHTML = mainLoggedIn
-    }
-else {
-    mainSection.classList = "";//clear all white space again
     mainSection.classList.add(
-        "w-screen",
-        "flex",
-        "justify-center",
-        "bg-white",
-        "md:my-[3rem]",
-        "p-8",
-    )
-    mainSection.innerHTML = mainLoggedOut
-    }
-}
+      "bg-white",
+      "border-l",
+      "border-r",
+      "px-4",
+      "py-6",
+      "sm:px-6",
+      "sm:py-8",
+      "md:px-8",
+      "md:py-10"
+    );
+    mainSection.innerHTML = mainLoggedIn;
+  } else {
+    mainSection.classList = ""; //clear all white space again
+    mainSection.classList.add(
+      "w-screen",
+      "flex",
+      "justify-center",
+      "bg-white",
+      "md:my-[3rem]",
+      "p-8"
+    );
+    mainSection.innerHTML = mainLoggedOut;
+  }
+};
 
 //.function to assign form
-let assignForm = ()=>{
-if(loggedOut){
-form = document.querySelector("#sign-up-form")
-}
-}
-assignForm()
-
-
+let assignForm = () => {
+  if (loggedOut) {
+    form = document.querySelector("#sign-up-form");
+  }
+};
+assignForm();
 
 //1.Getting elements for account creation
-let form, userName, firstName, lastName, email, password, createAccountBtn
-
-
+let form, userName, firstName, lastName, email, password, createAccountBtn;
 
 //.selecting contents of form
-if (form){
- userName = document.querySelector("#UserName")
- firstName = form.querySelector("#firstName")
- lastName = form.querySelector("#lastName")
- email = form.querySelector("#email")
- password = form.querySelector("#password")
- createAccountBtn = form.querySelector("#createAccountBtn")
+if (form) {
+  userName = document.querySelector("#UserName");
+  firstName = form.querySelector("#firstName");
+  lastName = form.querySelector("#lastName");
+  email = form.querySelector("#email");
+  password = form.querySelector("#password");
+  createAccountBtn = form.querySelector("#createAccountBtn");
 }
 
-let userId = 0 //. initializing the first userId to zero
-
-
-
+let userId = 0; //. initializing the first userId to zero
 
 //. the array of objects that would store user details in local storage
-let usersArray = JSON.parse(localStorage.getItem("usersArrayCloudVersion")) || [{id: 0,
-            userName:"",
-            firstName:"",
-            lastName: "",
-            email: "",
-            password:""}]
-
-
-
-    
-
+let usersArray = JSON.parse(localStorage.getItem("usersArrayCloudVersion")) || [
+  { id: 0, userName: "", firstName: "", lastName: "", email: "", password: "" },
+];
 
 //. here the magic of creating users begins
-if (form = document.querySelector("#sign-up-form")){
-form.addEventListener("submit", (e) => {
-    e.preventDefault()
-    const userAlreadyExists = usersArray.some(user => user.userName == userName.value.trim())
+if ((form = document.querySelector("#sign-up-form"))) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const userAlreadyExists = usersArray.some(
+      (user) => user.userName == userName.value.trim()
+    );
 
-    if (userAlreadyExists){
-        alert("user with userName already exists")
-        return;
-    }
+    if (userAlreadyExists) {
+      alert("user with userName already exists");
+      return;
+    } else {
+      // .creating a new user
+      ++userId;
+      const user = {
+        id: userId,
+        userName: userName.value.trim(),
+        firstName: firstName.value.trim(),
+        lastName: lastName.value.trim(),
+        email: email.value.trim(),
+        password: password.value.trim(), //
+      };
+      //. adding a new user to usersArray
+      usersArray.push(user);
+      localStorage.setItem(
+        "usersArrayCloudVersion",
+        JSON.stringify(usersArray)
+      );
+      console.log(usersArray);
 
-    else{
-        // .creating a new user
-        ++userId
-        const user = {
-            id: userId,
-            userName: userName.value.trim(),
-            firstName: firstName.value.trim(),
-            lastName: lastName.value.trim(),
-            email: email.value.trim(),
-            password: password.value.trim(), //
-        };
-        //. adding a new user to usersArray
-        usersArray.push(user)
-        localStorage.setItem("usersArrayCloudVersion", JSON.stringify(usersArray));
-        console.log(usersArray);
+      //. clearing the input fields
+      const inputfields = form.querySelectorAll("input");
+      inputfields.forEach((element) => {
+        element.value = "";
+      });
 
-        //. clearing the input fields
-        const inputfields = form.querySelectorAll("input")
-        inputfields.forEach(element => {element.value = "" });
+      //.logging in user
+      loggedOut = !loggedOut;
+      localStorage.setItem("loggedOut", JSON.stringify(loggedOut));
 
-        //.logging in user
-        loggedOut = !loggedOut
-        localStorage.setItem("loggedOut",JSON.stringify(loggedOut))
-
-        console.log(loggedOut)
-   //dynamic rendering
-    mainSection.classList = ""; //clears all classes
-    mainSection.classList.add("bg-white",
+      console.log(loggedOut);
+      //dynamic rendering
+      mainSection.classList = ""; //clears all classes
+      mainSection.classList.add(
+        "bg-white",
         "border-l",
         "border-r",
         "px-4",
@@ -302,18 +293,13 @@ form.addEventListener("submit", (e) => {
         "sm:px-6",
         "sm:py-8",
         "md:px-8",
-        "md:py-10",
-    )
-    mainSection.innerHTML = mainLoggedIn
-    
-}})}
-else{console.log("form is not created")}
+        "md:py-10"
+      );
+      mainSection.innerHTML = mainLoggedIn;
+    }
+  });
+} else {
+  console.log("form is not created");
+}
 
-
-toggleMain()
-
-
-
-
-
-
+toggleMain();

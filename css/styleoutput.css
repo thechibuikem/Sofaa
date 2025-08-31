@@ -1601,6 +1601,12 @@
       border-width: 1px;
     }
   }
+  .dark\:border-2 {
+    @media (prefers-color-scheme: dark) {
+      border-style: var(--tw-border-style);
+      border-width: 2px;
+    }
+  }
   .dark\:border-t-1 {
     @media (prefers-color-scheme: dark) {
       border-top-style: var(--tw-border-style);

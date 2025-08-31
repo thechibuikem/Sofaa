@@ -92,7 +92,7 @@ let createTestimonial = (testimony, wrapper) => {
             ${stars}
           </div>
           <!-- the name and verified flexed -->
-          <div id="nameXverified" class="flex items-center">
+          <div id="nameXverified" class="flex gap-x-1 items-center">
             <h3 class="text- uppercase">${name}</h3>
 ${verifiedIcon}
 </div>
@@ -100,7 +100,11 @@ ${verifiedIcon}
            ${text}
           </h6>
   `;
-  testimonialCard.classList.add("dark:border-[#ffffff50]","dark:border-1","testimonialcardstyling",);
+  testimonialCard.classList.add(
+    "dark:border-[#ffffff50]",
+    "dark:border-1",
+    "testimonialcardstyling"
+  );
 
   wrapper.appendChild(testimonialCard);
 };
@@ -126,17 +130,17 @@ let movement = 0;
 const leftBtn = document.querySelector("#testimonial-left");
 const rightBtn = document.querySelector("#testimonial-right");
 
-let moveright = () =>{
-movement += testimonialCardWidth;
+let moveright = () => {
+  movement += testimonialCardWidth;
 
   // testimonialWrapper.style.transform = `translateX(${movement}px)`;
-  testimonialWrapper.style.transform = translateX(100)
-}
+  testimonialWrapper.style.transform = translateX(100);
+};
 
 let moveleft = () => {
-  movement -= testimonialCardWidth
+  movement -= testimonialCardWidth;
   testimonialWrapper.style.transform = `translateX(${movement}px)`;
 };
 
-leftBtn.addEventListener("click",moveleft)
+leftBtn.addEventListener("click", moveleft);
 rightBtn.addEventListener("click", moveright);

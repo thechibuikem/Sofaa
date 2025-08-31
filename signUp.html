@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SOfa Sign Up</title>
     <link rel="stylesheet" href="css/styleoutput.css" />
-</head>
-<body class="bg-white dark:bg-black min-h-screen min-w-screen overflow-x-hidden">
-
-        <!--======================== THE TOP SECTION ==============================-->
+  </head>
+  <body
+    class="bg-white dark:bg-black min-h-screen min-w-screen overflow-x-hidden"
+  >
+    <!--======================== THE TOP SECTION ==============================-->
     <header id="header" class="min-w-screen overflow-x-hidden dark:text-white">
       <aside
         id="aside"
@@ -53,7 +54,9 @@
               class="dark:stroke-white"
             />
           </svg>
-          <a class="text-3xl font-bold cursor-pointer" href="index.html">SOFA</a>
+          <a class="text-3xl font-bold cursor-pointer" href="index.html"
+            >SOFA</a
+          >
           <ul class="hidden lg:flex ml-[2rem] capitalize gap-x-8">
             <li class="flex items-center">
               <a href="">shop</a>
@@ -158,13 +161,206 @@
     </header>
 
     <!--======================= the main section ============================-->
-    <main class="w-screen flex justify-center md:my-[3rem] dark:bg-black" id="sign-up-main-section">
-        <!-- Sign Up Card -->
+    <main
+      class="w-screen flex justify-center md:my-[3rem] dark:bg-black"
+      id="sign-up-main-section"
+    >
+      <!-- Sign Up Card -->
 
+      <!-- Sign Up Card -->
+      <figure
+        class="sm:border-2 sm:border-[#00000050] bg-white border-none rounded-lg sm:shadow-md p-8 max-w-md dark:bg-black dark:text-white dark:border-2 dark:border-[#ffffff50]"
+      >
+        <!-- Header -->
+        <div class="text-center mb-8">
+          <h1 class="text-3xl font-bold text-black dark:text-white mb-2">Create Account</h1>
+          <p class="text-gray-600">Join us today</p>
+        </div>
+
+        <!-- Sign Up Form -->
+        <form class="space-y-6" id="sign-up-form">
+          <!-- Name Fields -->
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label
+                for="firstName"
+                class="block text-sm font-medium text-black mb-2"
+              >
+                First Name
+              </label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                required
+                class="w-full px-4 py-3 border-1 border-[#00000050] rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200"
+                placeholder="Ataraxia"
+              />
+            </div>
+            <div>
+              <label
+                for="lastName"
+                class="block text-sm font-medium text-black mb-2"
+              >
+                Last Name
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                required
+                class="w-full px-4 py-3 border-1 border-[#00000050] rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200"
+                placeholder="Chibuikem"
+              />
+            </div>
+          </div>
+
+          <!-- UserName Field -->
+          <div>
+            <label
+              for="email"
+              class="block text-sm font-medium text-black mb-2"
+            >
+              UserName
+            </label>
+            <input
+              type="text"
+              id="UserName"
+              name="UserName"
+              required
+              class="w-full px-4 py-3 border-1 border-[#00000050] rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200"
+              placeholder="UserName"
+            />
+          </div>
+
+          <!-- Email Field -->
+          <div>
+            <label
+              for="email"
+              class="block text-sm font-medium text-black mb-2"
+            >
+              Email Address
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-3 border-1 border-[#00000050] rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200"
+              placeholder="dev.ataraxia7@gmail.com"
+            />
+          </div>
+
+          <!-- Password Field -->
+          <div>
+            <label
+              for="password"
+              class="block text-sm font-medium text-black mb-2"
+            >
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              class="w-full px-4 py-3 border-1 border-[#00000050] rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200"
+              placeholder="Create a strong password"
+            />
+          </div>
+
+          <!-- Terms and Conditions -->
+          <div class="flex items-start">
+            <input
+              type="checkbox"
+              id="terms"
+              name="terms"
+              required
+              class="w-4 h-4 border-1 border-[#00000050] rounded focus:ring-black focus:ring-2 mt-1"
+            />
+            <label for="terms" class="ml-2 text-sm text-black">
+              I agree to the
+              <a href="#" class="font-medium hover:underline"
+                >Terms of Service</a
+              >
+              and
+              <a href="#" class="font-medium hover:underline">Privacy Policy</a>
+            </label>
+          </div>
+
+          <!-- Sign Up Button -->
+          <button
+            type="submit"
+            class="w-full bg-black text-white py-3 px-4 rounded-lg font-medium hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all duration-200"
+            id="createAccountBtn"
+          >
+            Create Account
+          </button>
+        </form>
+
+        <!-- Divider -->
+        <div class="mt-8 mb-6">
+          <div class="relative">
+            <div class="absolute inset-0 flex items-center">
+              <div class="w-full border-t border-gray-300"></div>
+            </div>
+            <div class="relative flex justify-center text-sm">
+              <span class="px-2 bg-white dark:bg-black text-gray-500">Or sign up with</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Sign Up Buttons -->
+        <div class="grid grid-cols-2 gap-3">
+          <button
+            type="button"
+            class="flex items-center justify-center px-4 py-3 border-1 border-[#00000050] rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all duration-200"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+              />
+              <path
+                fill="currentColor"
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+              />
+              <path
+                fill="currentColor"
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+              />
+              <path
+                fill="currentColor"
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+              />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="flex items-center justify-center px-4 py-3 border-1 border-[#00000050] rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all duration-200"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Login Link -->
+        <div class="mt-8 text-center">
+          <p class="text-black">
+            Already have an account?
+            <a href="login.html" class="font-medium hover:underline"
+              >Sign in here</a
+            >
+          </p>
+        </div>
+      </figure>
     </main>
 
-
-        <!--================= FOOTER ===========================-->
+    <!--================= FOOTER ===========================-->
     <footer
       class="flex flex-col items-center px-[1rem] sm:px-[2rem] md:px-[4rem] sm:mt-[3rem] mt-[10rem] md:mt-[10rem] bg-gray-200 dark:bg-[#000002] dark:border-[#ffffff50] dark:border-t-1"
     >
@@ -172,7 +368,9 @@
       <figure
         class="flex flex-col justify-center gap-y-[2rem] md:flex-col bg-[#000002] p-6 rounded-2xl transform -translate-y-1/4 dark:border-[#ffffff50] dark:border-1"
       >
-        <h3 class="text-3xl md:text-4xl text-[#fffff3] font-bold uppercase dark:text-black">
+        <h3
+          class="text-3xl md:text-4xl text-[#fffff3] font-bold uppercase dark:text-white"
+        >
           stay up to date about our latest offers
         </h3>
 
@@ -322,16 +520,32 @@
         <ul class="space-y-3">
           <li class="font-semibold uppercase text-sm mb-4">COMPANY</li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">About</a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm"
+              >About</a
+            >
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Features</a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm"
+              >Features</a
+            >
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Works</a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm"
+              >Works</a
+            >
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Career</a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm"
+              >Career</a
+            >
           </li>
         </ul>
 
@@ -339,16 +553,32 @@
         <ul class="space-y-3">
           <li class="font-semibold uppercase text-sm mb-4">HELP</li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Customer Support</a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm"
+              >Customer Support</a
+            >
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Delivery Details</a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm"
+              >Delivery Details</a
+            >
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Terms & Conditions</a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm"
+              >Terms & Conditions</a
+            >
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Privacy Policy</a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm"
+              >Privacy Policy</a
+            >
           </li>
         </ul>
 
@@ -356,16 +586,32 @@
         <ul class="space-y-3">
           <li class="font-semibold uppercase text-sm mb-4">FAQ</li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Account</a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm"
+              >Account</a
+            >
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Manage Deliveries</a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm"
+              >Manage Deliveries</a
+            >
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Orders</a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm"
+              >Orders</a
+            >
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Payments</a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm"
+              >Payments</a
+            >
           </li>
         </ul>
 
@@ -373,16 +619,32 @@
         <ul class="space-y-3">
           <li class="font-semibold uppercase text-sm mb-4">RESOURCES</li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Free eBooks</a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm"
+              >Free eBooks</a
+            >
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">Development Tutorial</a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm"
+              >Development Tutorial</a
+            >
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">How to - Blog</a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm"
+              >How to - Blog</a
+            >
           </li>
           <li>
-            <a href="#" class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm">YouTube Playlist</a>
+            <a
+              href="#"
+              class="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white text-sm"
+              >YouTube Playlist</a
+            >
           </li>
         </ul>
       </div>
@@ -392,5 +654,5 @@
     <script src="scripts/controlAside.js"></script>
     <script type="module" src="scripts/search.js"></script>
     <script type="module" src="scripts/signUp.js"></script>
-</body>
+  </body>
 </html>
